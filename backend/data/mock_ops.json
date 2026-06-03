@@ -1,0 +1,60 @@
+{
+  "_comment": "Demo uçuş verileri. seed_flights.py ile flight_legs tablosuna yüklenir. flight_ref unique anahtarı; aidx içine display için ek alanlar konabilir.",
+  "flights": [
+    {
+      "flight_ref": "TK1862-2026-06-28",
+      "flight_number": "TK1862",
+      "scheduled_date": "2026-06-28",
+      "origin": "IST",
+      "destination": "FCO",
+      "aidx": {
+        "route_display": "IST → FCO",
+        "origin_name": "Istanbul Airport",
+        "destination_name": "Rome Fiumicino",
+        "gate": "G9A",
+        "boarding_time": "14:35",
+        "departure_time": "15:10",
+        "boarding_zone": "Grup 2",
+        "assigned_seat": "23A",
+        "status": "Boarding",
+        "status_tone": "green"
+      }
+    },
+    {
+      "flight_ref": "TK1979-2026-06-28",
+      "flight_number": "TK1979",
+      "scheduled_date": "2026-06-28",
+      "origin": "IST",
+      "destination": "LHR",
+      "aidx": {
+        "route_display": "IST → LHR",
+        "origin_name": "Istanbul Airport",
+        "destination_name": "London Heathrow",
+        "gate": "H7",
+        "boarding_time": "10:45",
+        "departure_time": "11:20",
+        "checkin_counters": "D12-D18",
+        "assigned_seat": "14A",
+        "baggage_allowance_kg": 23,
+        "status": "Check-in Open",
+        "status_tone": "green"
+      }
+    },
+    {
+      "flight_ref": "TK7-2026-06-28",
+      "flight_number": "TK7",
+      "scheduled_date": "2026-06-28",
+      "origin": "JFK",
+      "destination": "IST",
+      "aidx": {
+        "route_display": "JFK → IST",
+        "origin_name": "New York JFK",
+        "destination_name": "Istanbul Airport",
+        "arrival_gate": "B5",
+        "arrival_time": "13:40",
+        "status": "Arrived",
+        "status_tone": "green"
+      }
+    }
+  ]
+}

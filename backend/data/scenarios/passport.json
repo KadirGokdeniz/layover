@@ -1,0 +1,104 @@
+{
+  "id": "passport",
+  "tab": "passport",
+  "mode": "quick_pattern",
+  "title": {
+    "tr": "Pasaport kontrolü",
+    "en": "Passport control"
+  },
+  "flight_ref": null,
+  "data_used": [],
+  "languages_demoed": [
+    "it",
+    "en"
+  ],
+  "demo_note": "Hızlı kalıp. Sistem bu tab'ta resmî karar VERMEZ — yalnızca yönlendirme yapar. Sınır polisi karar verir; sistem o role girmez. Replikler bilinçle bu sınıra göre yazılmıştır.",
+  "variants": {
+    "it": {
+      "turns": [
+        {
+          "n": 1,
+          "speaker": "passenger",
+          "lang": "it",
+          "text": "Mi scusi, quale fila devo fare?"
+        },
+        {
+          "n": 2,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Pardon, hangi kuyruğa girmeliyim?",
+          "direction": "it->tr"
+        },
+        {
+          "n": 3,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Pasaportunuzu görebilir miyim? Avrupa Birliği pasaportu, sağdaki kuyruğa girebilirsiniz. E-pasaport kullanıyorsanız otomatik kapıları da kullanabilirsiniz."
+        },
+        {
+          "n": 4,
+          "speaker": "system",
+          "lang": "it",
+          "text": "Posso vedere il suo passaporto? Passaporto dell'Unione Europea, può andare nella fila a destra. Se ha il passaporto elettronico, può anche usare i gate automatici.",
+          "direction": "tr->it"
+        },
+        {
+          "n": 5,
+          "speaker": "passenger",
+          "lang": "it",
+          "text": "Grazie, uso il gate automatico."
+        },
+        {
+          "n": 6,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Teşekkürler, otomatik kapıyı kullanacağım.",
+          "direction": "it->tr"
+        }
+      ]
+    },
+    "en": {
+      "turns": [
+        {
+          "n": 1,
+          "speaker": "passenger",
+          "lang": "en",
+          "text": "Excuse me, which line should I join?"
+        },
+        {
+          "n": 2,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Pardon, hangi kuyruğa girmeliyim?",
+          "direction": "en->tr"
+        },
+        {
+          "n": 3,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Pasaportunuzu görebilir miyim? Birleşik Krallık pasaportu, soldaki diğer ülkeler kuyruğuna girmeniz gerekiyor. E-pasaportunuz varsa otomatik kapıları da kullanabilirsiniz."
+        },
+        {
+          "n": 4,
+          "speaker": "system",
+          "lang": "en",
+          "text": "May I see your passport? UK passport, please join the other nationalities line on the left. If you have a biometric passport, you can also use the automatic gates.",
+          "direction": "tr->en"
+        },
+        {
+          "n": 5,
+          "speaker": "passenger",
+          "lang": "en",
+          "text": "Thank you, I'll use the automatic gate."
+        },
+        {
+          "n": 6,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Teşekkürler, otomatik kapıyı kullanacağım.",
+          "direction": "en->tr"
+        }
+      ]
+    }
+  }
+}

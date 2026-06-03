@@ -1,0 +1,422 @@
+{
+  "id": "check-in",
+  "tab": "check-in",
+  "mode": "full",
+  "title": {
+    "tr": "Check-in — Londra uçuşu",
+    "en": "Check-in — London flight"
+  },
+  "flight_ref": "TK1979-2026-06-28",
+  "data_used": [
+    "checkinCounters",
+    "gate",
+    "boardingTime",
+    "baggageAllowanceKg",
+    "assignedSeat"
+  ],
+  "languages_demoed": [
+    "it",
+    "en",
+    "ar",
+    "ru"
+  ],
+  "variants": {
+    "it": {
+      "turns": [
+        {
+          "n": 1,
+          "speaker": "passenger",
+          "lang": "it",
+          "text": "Buongiorno, vorrei fare il check-in per Londra."
+        },
+        {
+          "n": 2,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Günaydın, Londra için check-in yapmak istiyorum.",
+          "direction": "it->tr"
+        },
+        {
+          "n": 3,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Tabii, hoş geldiniz. Pasaportunuzu ve rezervasyon kodunuzu alabilir miyim?"
+        },
+        {
+          "n": 4,
+          "speaker": "system",
+          "lang": "it",
+          "text": "Certo, benvenuto. Posso avere il suo passaporto e il codice di prenotazione?",
+          "direction": "tr->it"
+        },
+        {
+          "n": 5,
+          "speaker": "passenger",
+          "lang": "it",
+          "text": "Eccoli. Ho una valigia da imbarcare."
+        },
+        {
+          "n": 6,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Buyurun. Bir valizim var, teslim etmek istiyorum.",
+          "direction": "it->tr"
+        },
+        {
+          "n": 7,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Çantanızı banda koyabilirsiniz. Bagaj hakkınız 23 kilo, valiziniz 19 kilo, sorun yok. Koltuk tercihiniz var mı? Pencere veya koridor?",
+          "data_refs": [
+            "baggageAllowanceKg"
+          ]
+        },
+        {
+          "n": 8,
+          "speaker": "system",
+          "lang": "it",
+          "text": "Può mettere la valigia sul nastro. La sua franchigia bagaglio è di 23 chili, la sua valigia pesa 19 chili, va bene. Ha una preferenza per il posto? Finestrino o corridoio?",
+          "direction": "tr->it",
+          "forced": [
+            "23",
+            "19"
+          ]
+        },
+        {
+          "n": 9,
+          "speaker": "passenger",
+          "lang": "it",
+          "text": "Finestrino, per favore."
+        },
+        {
+          "n": 10,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Pencere, lütfen.",
+          "direction": "it->tr"
+        },
+        {
+          "n": 11,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Tamamdır. Koltuğunuz 14A, pencere kenarı. İşte biniş kartınız. Kapı H7'den, biniş 10:45'te başlayacak. İyi yolculuklar.",
+          "data_refs": [
+            "assignedSeat",
+            "gate",
+            "boardingTime"
+          ]
+        },
+        {
+          "n": 12,
+          "speaker": "system",
+          "lang": "it",
+          "text": "Perfetto. Il suo posto è 14A, finestrino. Ecco la sua carta d'imbarco. Gate H7, l'imbarco inizierà alle 10:45. Buon viaggio.",
+          "direction": "tr->it",
+          "forced": [
+            "14A",
+            "H7",
+            "10:45"
+          ]
+        }
+      ]
+    },
+    "en": {
+      "turns": [
+        {
+          "n": 1,
+          "speaker": "passenger",
+          "lang": "en",
+          "text": "Good morning, I'd like to check in for London."
+        },
+        {
+          "n": 2,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Günaydın, Londra için check-in yapmak istiyorum.",
+          "direction": "en->tr"
+        },
+        {
+          "n": 3,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Tabii, hoş geldiniz. Pasaportunuzu ve rezervasyon kodunuzu alabilir miyim?"
+        },
+        {
+          "n": 4,
+          "speaker": "system",
+          "lang": "en",
+          "text": "Of course, welcome. May I have your passport and booking reference?",
+          "direction": "tr->en"
+        },
+        {
+          "n": 5,
+          "speaker": "passenger",
+          "lang": "en",
+          "text": "Here you are. I have one bag to check in."
+        },
+        {
+          "n": 6,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Buyurun. Bir valizim var, teslim etmek istiyorum.",
+          "direction": "en->tr"
+        },
+        {
+          "n": 7,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Çantanızı banda koyabilirsiniz. Bagaj hakkınız 23 kilo, valiziniz 19 kilo, sorun yok. Koltuk tercihiniz var mı? Pencere veya koridor?",
+          "data_refs": [
+            "baggageAllowanceKg"
+          ]
+        },
+        {
+          "n": 8,
+          "speaker": "system",
+          "lang": "en",
+          "text": "Please place your bag on the belt. Your baggage allowance is 23 kilos, your bag is 19 kilos, that's fine. Do you have a seat preference? Window or aisle?",
+          "direction": "tr->en",
+          "forced": [
+            "23",
+            "19"
+          ]
+        },
+        {
+          "n": 9,
+          "speaker": "passenger",
+          "lang": "en",
+          "text": "Window, please."
+        },
+        {
+          "n": 10,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Pencere, lütfen.",
+          "direction": "en->tr"
+        },
+        {
+          "n": 11,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Tamamdır. Koltuğunuz 14A, pencere kenarı. İşte biniş kartınız. Kapı H7'den, biniş 10:45'te başlayacak. İyi yolculuklar.",
+          "data_refs": [
+            "assignedSeat",
+            "gate",
+            "boardingTime"
+          ]
+        },
+        {
+          "n": 12,
+          "speaker": "system",
+          "lang": "en",
+          "text": "Done. Your seat is 14A, window. Here's your boarding pass. Gate H7, boarding starts at 10:45. Have a good flight.",
+          "direction": "tr->en",
+          "forced": [
+            "14A",
+            "H7",
+            "10:45"
+          ]
+        }
+      ]
+    },
+    "ar": {
+      "rtl": true,
+      "turns": [
+        {
+          "n": 1,
+          "speaker": "passenger",
+          "lang": "ar",
+          "text": "صباح الخير، أريد تسجيل الدخول للرحلة إلى لندن."
+        },
+        {
+          "n": 2,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Günaydın, Londra uçuşu için check-in yapmak istiyorum.",
+          "direction": "ar->tr"
+        },
+        {
+          "n": 3,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Tabii, hoş geldiniz. Pasaportunuzu ve rezervasyon kodunuzu alabilir miyim?"
+        },
+        {
+          "n": 4,
+          "speaker": "system",
+          "lang": "ar",
+          "text": "بالتأكيد، أهلاً وسهلاً. هل يمكنني الحصول على جواز سفرك ورقم الحجز؟",
+          "direction": "tr->ar"
+        },
+        {
+          "n": 5,
+          "speaker": "passenger",
+          "lang": "ar",
+          "text": "تفضل. لدي حقيبة واحدة أريد تسجيلها."
+        },
+        {
+          "n": 6,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Buyurun. Bir valizim var, teslim etmek istiyorum.",
+          "direction": "ar->tr"
+        },
+        {
+          "n": 7,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Çantanızı banda koyabilirsiniz. Bagaj hakkınız 23 kilo, valiziniz 19 kilo, sorun yok. Koltuk tercihiniz var mı? Pencere veya koridor?",
+          "data_refs": [
+            "baggageAllowanceKg"
+          ]
+        },
+        {
+          "n": 8,
+          "speaker": "system",
+          "lang": "ar",
+          "text": "يمكنك وضع حقيبتك على الحزام. وزن الأمتعة المسموح به 23 كيلوغرام، حقيبتك 19 كيلوغرام، لا توجد مشكلة. هل لديك تفضيل للمقعد؟ نافذة أم ممر؟",
+          "direction": "tr->ar",
+          "forced": [
+            "23",
+            "19"
+          ]
+        },
+        {
+          "n": 9,
+          "speaker": "passenger",
+          "lang": "ar",
+          "text": "بجانب النافذة، من فضلك."
+        },
+        {
+          "n": 10,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Pencere kenarı, lütfen.",
+          "direction": "ar->tr"
+        },
+        {
+          "n": 11,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Tamamdır. Koltuğunuz 14A, pencere kenarı. İşte biniş kartınız. Kapı H7'den, biniş 10:45'te başlayacak. İyi yolculuklar.",
+          "data_refs": [
+            "assignedSeat",
+            "gate",
+            "boardingTime"
+          ]
+        },
+        {
+          "n": 12,
+          "speaker": "system",
+          "lang": "ar",
+          "text": "تم. مقعدك 14A، بجانب النافذة. هذه بطاقة الصعود. البوابة H7، يبدأ الصعود في الساعة 10:45. رحلة سعيدة.",
+          "direction": "tr->ar",
+          "forced": [
+            "14A",
+            "H7",
+            "10:45"
+          ]
+        }
+      ]
+    },
+    "ru": {
+      "turns": [
+        {
+          "n": 1,
+          "speaker": "passenger",
+          "lang": "ru",
+          "text": "Доброе утро, я хочу зарегистрироваться на рейс в Лондон."
+        },
+        {
+          "n": 2,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Günaydın, Londra uçuşu için check-in yapmak istiyorum.",
+          "direction": "ru->tr"
+        },
+        {
+          "n": 3,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Tabii, hoş geldiniz. Pasaportunuzu ve rezervasyon kodunuzu alabilir miyim?"
+        },
+        {
+          "n": 4,
+          "speaker": "system",
+          "lang": "ru",
+          "text": "Конечно, добро пожаловать. Можно ваш паспорт и номер бронирования?",
+          "direction": "tr->ru"
+        },
+        {
+          "n": 5,
+          "speaker": "passenger",
+          "lang": "ru",
+          "text": "Вот, пожалуйста. У меня одна сумка для сдачи в багаж."
+        },
+        {
+          "n": 6,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Buyurun. Bir valizim var, teslim etmek istiyorum.",
+          "direction": "ru->tr"
+        },
+        {
+          "n": 7,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Çantanızı banda koyabilirsiniz. Bagaj hakkınız 23 kilo, valiziniz 19 kilo, sorun yok. Koltuk tercihiniz var mı? Pencere veya koridor?",
+          "data_refs": [
+            "baggageAllowanceKg"
+          ]
+        },
+        {
+          "n": 8,
+          "speaker": "system",
+          "lang": "ru",
+          "text": "Поставьте сумку на ленту. Норма провоза багажа — 23 килограмма, ваша сумка весит 19 килограммов, всё в порядке. У вас есть предпочтения по месту? У окна или у прохода?",
+          "direction": "tr->ru",
+          "forced": [
+            "23",
+            "19"
+          ]
+        },
+        {
+          "n": 9,
+          "speaker": "passenger",
+          "lang": "ru",
+          "text": "У окна, пожалуйста."
+        },
+        {
+          "n": 10,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Pencere kenarı, lütfen.",
+          "direction": "ru->tr"
+        },
+        {
+          "n": 11,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Tamamdır. Koltuğunuz 14A, pencere kenarı. İşte biniş kartınız. Kapı H7'den, biniş 10:45'te başlayacak. İyi yolculuklar.",
+          "data_refs": [
+            "assignedSeat",
+            "gate",
+            "boardingTime"
+          ]
+        },
+        {
+          "n": 12,
+          "speaker": "system",
+          "lang": "ru",
+          "text": "Готово. Ваше место 14A, у окна. Вот ваш посадочный талон. Выход H7, посадка начнётся в 10:45. Счастливого пути.",
+          "direction": "tr->ru",
+          "forced": [
+            "14A",
+            "H7",
+            "10:45"
+          ]
+        }
+      ]
+    }
+  }
+}

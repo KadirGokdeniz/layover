@@ -1,0 +1,104 @@
+{
+  "id": "security",
+  "tab": "security",
+  "mode": "quick_pattern",
+  "title": {
+    "tr": "Güvenlik kontrolü",
+    "en": "Security check"
+  },
+  "flight_ref": null,
+  "data_used": [],
+  "languages_demoed": [
+    "it",
+    "en"
+  ],
+  "demo_note": "Hızlı kalıp. Güvenlikte konuşma kısa ve emir kipinde, sistem zaten basit talimatları kolayca çevirir. Mock veriden bağımsız.",
+  "variants": {
+    "it": {
+      "turns": [
+        {
+          "n": 1,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Lütfen ceplerinizi boşaltın, dizüstü bilgisayarınızı ve sıvılarınızı ayrı tepsiye koyun."
+        },
+        {
+          "n": 2,
+          "speaker": "system",
+          "lang": "it",
+          "text": "Per favore, svuoti le tasche, metta il computer portatile e i liquidi in un vassoio separato.",
+          "direction": "tr->it"
+        },
+        {
+          "n": 3,
+          "speaker": "passenger",
+          "lang": "it",
+          "text": "Anche la cintura?"
+        },
+        {
+          "n": 4,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Kemer de mi?",
+          "direction": "it->tr"
+        },
+        {
+          "n": 5,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Evet, kemerinizi de çıkarın lütfen. Ayakkabılarınız kalabilir."
+        },
+        {
+          "n": 6,
+          "speaker": "system",
+          "lang": "it",
+          "text": "Sì, tolga anche la cintura per favore. Le scarpe può tenerle.",
+          "direction": "tr->it"
+        }
+      ]
+    },
+    "en": {
+      "turns": [
+        {
+          "n": 1,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Lütfen ceplerinizi boşaltın, dizüstü bilgisayarınızı ve sıvılarınızı ayrı tepsiye koyun."
+        },
+        {
+          "n": 2,
+          "speaker": "system",
+          "lang": "en",
+          "text": "Please empty your pockets, place your laptop and liquids in a separate tray.",
+          "direction": "tr->en"
+        },
+        {
+          "n": 3,
+          "speaker": "passenger",
+          "lang": "en",
+          "text": "Belt too?"
+        },
+        {
+          "n": 4,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Kemer de mi?",
+          "direction": "en->tr"
+        },
+        {
+          "n": 5,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Evet, kemerinizi de çıkarın lütfen. Ayakkabılarınız kalabilir."
+        },
+        {
+          "n": 6,
+          "speaker": "system",
+          "lang": "en",
+          "text": "Yes, please remove your belt as well. You can keep your shoes on.",
+          "direction": "tr->en"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "scenario_count": 5,
+    "total_files": 6
+  },
+  "scenarios": [
+    {
+      "id": "boarding",
+      "tab": "boarding",
+      "mode": "full",
+      "title_tr": "Biniş — Roma kapısı",
+      "languages_demoed": [
+        "it",
+        "en",
+        "ar",
+        "ru"
+      ],
+      "flight_ref": "TK1862-2026-06-28",
+      "file": "scenarios/boarding.json"
+    },
+    {
+      "id": "check-in",
+      "tab": "check-in",
+      "mode": "full",
+      "title_tr": "Check-in — Londra uçuşu",
+      "languages_demoed": [
+        "it",
+        "en",
+        "ar",
+        "ru"
+      ],
+      "flight_ref": "TK1979-2026-06-28",
+      "file": "scenarios/check_in.json"
+    },
+    {
+      "id": "transfer",
+      "tab": "transfer",
+      "mode": "full",
+      "title_tr": "Transfer — New York'tan Roma'ya bağlantı",
+      "languages_demoed": [
+        "it",
+        "en",
+        "ar",
+        "ru"
+      ],
+      "flight_ref": [
+        "TK7-2026-06-28",
+        "TK1862-2026-06-28"
+      ],
+      "file": "scenarios/transfer.json"
+    },
+    {
+      "id": "security",
+      "tab": "security",
+      "mode": "quick_pattern",
+      "title_tr": "Güvenlik kontrolü",
+      "languages_demoed": [
+        "it",
+        "en"
+      ],
+      "flight_ref": null,
+      "file": "scenarios/security.json"
+    },
+    {
+      "id": "passport",
+      "tab": "passport",
+      "mode": "quick_pattern",
+      "title_tr": "Pasaport kontrolü",
+      "languages_demoed": [
+        "it",
+        "en"
+      ],
+      "flight_ref": null,
+      "file": "scenarios/passport.json"
+    }
+  ]
+}

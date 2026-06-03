@@ -1,0 +1,452 @@
+{
+  "id": "transfer",
+  "tab": "transfer",
+  "mode": "full",
+  "title": {
+    "tr": "Transfer — New York'tan Roma'ya bağlantı",
+    "en": "Transfer — Connecting from New York to Rome"
+  },
+  "flight_refs": [
+    "TK7-2026-06-28",
+    "TK1862-2026-06-28"
+  ],
+  "data_used": [
+    "arrivalGate",
+    "gate",
+    "boardingTime"
+  ],
+  "languages_demoed": [
+    "it",
+    "en",
+    "ar",
+    "ru"
+  ],
+  "demo_note": "En katmanlı senaryo: iki uçuş bacağı (gelen + bağlantı) ve yön bulma + bagaj sorusu birlikte. D koridoru force terim — yön bilgisi sapması yolcuyu yanlış yere yönlendirir.",
+  "variants": {
+    "it": {
+      "turns": [
+        {
+          "n": 1,
+          "speaker": "passenger",
+          "lang": "it",
+          "text": "Mi scusi, ho una coincidenza per Roma. Dove devo andare?"
+        },
+        {
+          "n": 2,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Pardon, Roma'ya bağlantı uçuşum var. Nereye gitmeliyim?",
+          "direction": "it->tr"
+        },
+        {
+          "n": 3,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Tabii, yardımcı olayım. Biniş kartınızı görebilir miyim?"
+        },
+        {
+          "n": 4,
+          "speaker": "system",
+          "lang": "it",
+          "text": "Certo, posso aiutarla. Posso vedere la sua carta d'imbarco?",
+          "direction": "tr->it"
+        },
+        {
+          "n": 5,
+          "speaker": "passenger",
+          "lang": "it",
+          "text": "Eccola. Sono appena arrivato da New York."
+        },
+        {
+          "n": 6,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Buyurun. New York'tan yeni geldim.",
+          "direction": "it->tr"
+        },
+        {
+          "n": 7,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Anladım. Roma uçuşunuz TK1862, kapı G9A. Buradan ileri yürüyün, transfer güvenlik kontrolünden geçeceksiniz, sonra D koridorunu takip edin. Yaklaşık 15 dakika sürer. Biniş 14:35'te başlıyor, yetişirsiniz.",
+          "data_refs": [
+            "gate",
+            "boardingTime"
+          ]
+        },
+        {
+          "n": 8,
+          "speaker": "system",
+          "lang": "it",
+          "text": "Capisco. Il suo volo per Roma è TK1862, gate G9A. Prosegua dritto, passerà attraverso il controllo di sicurezza per i transiti, poi segua il corridoio D. Ci vorranno circa 15 minuti. L'imbarco inizia alle 14:35, farà in tempo.",
+          "direction": "tr->it",
+          "forced": [
+            "TK1862",
+            "G9A",
+            "D",
+            "14:35",
+            "15"
+          ]
+        },
+        {
+          "n": 9,
+          "speaker": "passenger",
+          "lang": "it",
+          "text": "Devo ritirare i bagagli?"
+        },
+        {
+          "n": 10,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Bagajlarımı almam gerekir mi?",
+          "direction": "it->tr"
+        },
+        {
+          "n": 11,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Hayır, bagajınız doğrudan Roma'ya aktarılıyor. Yalnızca el bagajınızla devam edebilirsiniz."
+        },
+        {
+          "n": 12,
+          "speaker": "system",
+          "lang": "it",
+          "text": "No, il suo bagaglio viene trasferito direttamente a Roma. Può proseguire solo con il bagaglio a mano.",
+          "direction": "tr->it"
+        },
+        {
+          "n": 13,
+          "speaker": "passenger",
+          "lang": "it",
+          "text": "Perfetto, grazie mille."
+        },
+        {
+          "n": 14,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Tamam, çok teşekkür ederim.",
+          "direction": "it->tr"
+        }
+      ]
+    },
+    "en": {
+      "turns": [
+        {
+          "n": 1,
+          "speaker": "passenger",
+          "lang": "en",
+          "text": "Excuse me, I have a connecting flight to Rome. Where should I go?"
+        },
+        {
+          "n": 2,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Pardon, Roma'ya bağlantı uçuşum var. Nereye gitmeliyim?",
+          "direction": "en->tr"
+        },
+        {
+          "n": 3,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Tabii, yardımcı olayım. Biniş kartınızı görebilir miyim?"
+        },
+        {
+          "n": 4,
+          "speaker": "system",
+          "lang": "en",
+          "text": "Of course, let me help. May I see your boarding pass?",
+          "direction": "tr->en"
+        },
+        {
+          "n": 5,
+          "speaker": "passenger",
+          "lang": "en",
+          "text": "Here it is. I just arrived from New York."
+        },
+        {
+          "n": 6,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Buyurun. New York'tan yeni geldim.",
+          "direction": "en->tr"
+        },
+        {
+          "n": 7,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Anladım. Roma uçuşunuz TK1862, kapı G9A. Buradan ileri yürüyün, transfer güvenlik kontrolünden geçeceksiniz, sonra D koridorunu takip edin. Yaklaşık 15 dakika sürer. Biniş 14:35'te başlıyor, yetişirsiniz.",
+          "data_refs": [
+            "gate",
+            "boardingTime"
+          ]
+        },
+        {
+          "n": 8,
+          "speaker": "system",
+          "lang": "en",
+          "text": "I see. Your flight to Rome is TK1862, gate G9A. Go straight ahead, you'll pass through transfer security, then follow corridor D. It takes about 15 minutes. Boarding starts at 14:35, you'll make it.",
+          "direction": "tr->en",
+          "forced": [
+            "TK1862",
+            "G9A",
+            "D",
+            "14:35",
+            "15"
+          ]
+        },
+        {
+          "n": 9,
+          "speaker": "passenger",
+          "lang": "en",
+          "text": "Do I need to collect my baggage?"
+        },
+        {
+          "n": 10,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Bagajlarımı almam gerekir mi?",
+          "direction": "en->tr"
+        },
+        {
+          "n": 11,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Hayır, bagajınız doğrudan Roma'ya aktarılıyor. Yalnızca el bagajınızla devam edebilirsiniz."
+        },
+        {
+          "n": 12,
+          "speaker": "system",
+          "lang": "en",
+          "text": "No, your baggage is transferred directly to Rome. You can continue with just your hand baggage.",
+          "direction": "tr->en"
+        },
+        {
+          "n": 13,
+          "speaker": "passenger",
+          "lang": "en",
+          "text": "Perfect, thank you so much."
+        },
+        {
+          "n": 14,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Tamam, çok teşekkür ederim.",
+          "direction": "en->tr"
+        }
+      ]
+    },
+    "ar": {
+      "rtl": true,
+      "turns": [
+        {
+          "n": 1,
+          "speaker": "passenger",
+          "lang": "ar",
+          "text": "عذراً، لدي رحلة متصلة إلى روما. أين يجب أن أذهب؟"
+        },
+        {
+          "n": 2,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Pardon, Roma'ya bağlantı uçuşum var. Nereye gitmeliyim?",
+          "direction": "ar->tr"
+        },
+        {
+          "n": 3,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Tabii, yardımcı olayım. Biniş kartınızı görebilir miyim?"
+        },
+        {
+          "n": 4,
+          "speaker": "system",
+          "lang": "ar",
+          "text": "بالتأكيد، دعني أساعدك. هل يمكنني رؤية بطاقة الصعود؟",
+          "direction": "tr->ar"
+        },
+        {
+          "n": 5,
+          "speaker": "passenger",
+          "lang": "ar",
+          "text": "تفضل. وصلت للتو من نيويورك."
+        },
+        {
+          "n": 6,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Buyurun. New York'tan yeni geldim.",
+          "direction": "ar->tr"
+        },
+        {
+          "n": 7,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Anladım. Roma uçuşunuz TK1862, kapı G9A. Buradan ileri yürüyün, transfer güvenlik kontrolünden geçeceksiniz, sonra D koridorunu takip edin. Yaklaşık 15 dakika sürer. Biniş 14:35'te başlıyor, yetişirsiniz.",
+          "data_refs": [
+            "gate",
+            "boardingTime"
+          ]
+        },
+        {
+          "n": 8,
+          "speaker": "system",
+          "lang": "ar",
+          "text": "فهمت. رحلتك إلى روما هي TK1862، البوابة G9A. امشِ مباشرة، ستمر عبر التفتيش الأمني للترانزيت، ثم اتبع الممر D. يستغرق ذلك حوالي 15 دقيقة. يبدأ الصعود في الساعة 14:35، ستلحق بالرحلة.",
+          "direction": "tr->ar",
+          "forced": [
+            "TK1862",
+            "G9A",
+            "D",
+            "14:35",
+            "15"
+          ]
+        },
+        {
+          "n": 9,
+          "speaker": "passenger",
+          "lang": "ar",
+          "text": "هل يجب أن أستلم أمتعتي؟"
+        },
+        {
+          "n": 10,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Bagajlarımı almam gerekir mi?",
+          "direction": "ar->tr"
+        },
+        {
+          "n": 11,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Hayır, bagajınız doğrudan Roma'ya aktarılıyor. Yalnızca el bagajınızla devam edebilirsiniz."
+        },
+        {
+          "n": 12,
+          "speaker": "system",
+          "lang": "ar",
+          "text": "لا، يتم نقل أمتعتك مباشرة إلى روما. يمكنك المتابعة بالأمتعة اليدوية فقط.",
+          "direction": "tr->ar"
+        },
+        {
+          "n": 13,
+          "speaker": "passenger",
+          "lang": "ar",
+          "text": "ممتاز، شكراً جزيلاً."
+        },
+        {
+          "n": 14,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Mükemmel, çok teşekkür ederim.",
+          "direction": "ar->tr"
+        }
+      ]
+    },
+    "ru": {
+      "turns": [
+        {
+          "n": 1,
+          "speaker": "passenger",
+          "lang": "ru",
+          "text": "Извините, у меня стыковочный рейс в Рим. Куда мне идти?"
+        },
+        {
+          "n": 2,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Pardon, Roma'ya bağlantı uçuşum var. Nereye gitmeliyim?",
+          "direction": "ru->tr"
+        },
+        {
+          "n": 3,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Tabii, yardımcı olayım. Biniş kartınızı görebilir miyim?"
+        },
+        {
+          "n": 4,
+          "speaker": "system",
+          "lang": "ru",
+          "text": "Конечно, помогу. Можно посмотреть ваш посадочный талон?",
+          "direction": "tr->ru"
+        },
+        {
+          "n": 5,
+          "speaker": "passenger",
+          "lang": "ru",
+          "text": "Вот, пожалуйста. Я только что прилетел из Нью-Йорка."
+        },
+        {
+          "n": 6,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Buyurun. New York'tan yeni geldim.",
+          "direction": "ru->tr"
+        },
+        {
+          "n": 7,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Anladım. Roma uçuşunuz TK1862, kapı G9A. Buradan ileri yürüyün, transfer güvenlik kontrolünden geçeceksiniz, sonra D koridorunu takip edin. Yaklaşık 15 dakika sürer. Biniş 14:35'te başlıyor, yetişirsiniz.",
+          "data_refs": [
+            "gate",
+            "boardingTime"
+          ]
+        },
+        {
+          "n": 8,
+          "speaker": "system",
+          "lang": "ru",
+          "text": "Понятно. Ваш рейс в Рим — TK1862, выход G9A. Идите прямо, пройдёте транзитный досмотр, затем следуйте по коридору D. Это займёт около 15 минут. Посадка начинается в 14:35, вы успеете.",
+          "direction": "tr->ru",
+          "forced": [
+            "TK1862",
+            "G9A",
+            "D",
+            "14:35",
+            "15"
+          ]
+        },
+        {
+          "n": 9,
+          "speaker": "passenger",
+          "lang": "ru",
+          "text": "Нужно ли мне забирать багаж?"
+        },
+        {
+          "n": 10,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Bagajlarımı almam gerekir mi?",
+          "direction": "ru->tr"
+        },
+        {
+          "n": 11,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Hayır, bagajınız doğrudan Roma'ya aktarılıyor. Yalnızca el bagajınızla devam edebilirsiniz."
+        },
+        {
+          "n": 12,
+          "speaker": "system",
+          "lang": "ru",
+          "text": "Нет, ваш багаж перевозится напрямую в Рим. Вы можете продолжить только с ручной кладью.",
+          "direction": "tr->ru"
+        },
+        {
+          "n": 13,
+          "speaker": "passenger",
+          "lang": "ru",
+          "text": "Отлично, большое спасибо."
+        },
+        {
+          "n": 14,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Harika, çok teşekkür ederim.",
+          "direction": "ru->tr"
+        }
+      ]
+    }
+  }
+}

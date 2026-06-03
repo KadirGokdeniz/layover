@@ -1,0 +1,391 @@
+{
+  "id": "boarding",
+  "tab": "boarding",
+  "mode": "full",
+  "title": {
+    "tr": "Biniş — Roma kapısı",
+    "en": "Boarding — Rome gate"
+  },
+  "flight_ref": "TK1862-2026-06-28",
+  "data_used": [
+    "gate",
+    "boardingTime",
+    "boardingZone",
+    "assignedSeat",
+    "status"
+  ],
+  "languages_demoed": [
+    "it",
+    "en",
+    "ar",
+    "ru"
+  ],
+  "demo_note": "Brief'in kapak örneği. Tüm dört dil için aynı diyalog yapısı; sadece yolcu repliği dili değişir. Personel hep TR.",
+  "variants": {
+    "it": {
+      "turns": [
+        {
+          "n": 1,
+          "speaker": "passenger",
+          "lang": "it",
+          "text": "Mi scusi, è questo il gate per Roma?",
+          "terms": [
+            "gate"
+          ]
+        },
+        {
+          "n": 2,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Pardon, Roma uçuşunun kapısı bu mu?",
+          "direction": "it->tr",
+          "forced": [
+            "gate->kapı"
+          ]
+        },
+        {
+          "n": 3,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Evet, doğru yerdesiniz. Roma uçuşu, TK1862. Biniş kartınızı görebilir miyim?",
+          "data_refs": [
+            "flightNumber"
+          ]
+        },
+        {
+          "n": 4,
+          "speaker": "system",
+          "lang": "it",
+          "text": "Sì, è il posto giusto. Volo per Roma, TK1862. Posso vedere la sua carta d'imbarco?",
+          "direction": "tr->it",
+          "forced": [
+            "TK1862"
+          ]
+        },
+        {
+          "n": 5,
+          "speaker": "passenger",
+          "lang": "it",
+          "text": "Eccola. Ho fatto in tempo?"
+        },
+        {
+          "n": 6,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Buyurun. Yetiştim mi?",
+          "direction": "it->tr"
+        },
+        {
+          "n": 7,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Evet, yetiştiniz. Biniş 14:35'te başlayacak. Koltuğunuz 23A. Grup 2 olarak çağrılacaksınız, lütfen anonsları bekleyin.",
+          "data_refs": [
+            "boardingTime",
+            "assignedSeat",
+            "boardingZone"
+          ]
+        },
+        {
+          "n": 8,
+          "speaker": "system",
+          "lang": "it",
+          "text": "Sì, è in tempo. L'imbarco inizierà alle 14:35. Il suo posto è 23A. Sarà chiamato con il gruppo 2, attenda gli annunci per favore.",
+          "direction": "tr->it",
+          "forced": [
+            "14:35",
+            "23A",
+            "2"
+          ]
+        },
+        {
+          "n": 9,
+          "speaker": "passenger",
+          "lang": "it",
+          "text": "Grazie mille."
+        },
+        {
+          "n": 10,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Çok teşekkür ederim.",
+          "direction": "it->tr"
+        }
+      ]
+    },
+    "en": {
+      "turns": [
+        {
+          "n": 1,
+          "speaker": "passenger",
+          "lang": "en",
+          "text": "Excuse me, is this the gate for Rome?",
+          "terms": [
+            "gate"
+          ]
+        },
+        {
+          "n": 2,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Pardon, Roma uçuşunun kapısı bu mu?",
+          "direction": "en->tr",
+          "forced": [
+            "gate->kapı"
+          ]
+        },
+        {
+          "n": 3,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Evet, doğru yerdesiniz. Roma uçuşu, TK1862. Biniş kartınızı görebilir miyim?",
+          "data_refs": [
+            "flightNumber"
+          ]
+        },
+        {
+          "n": 4,
+          "speaker": "system",
+          "lang": "en",
+          "text": "Yes, you're in the right place. Flight to Rome, TK1862. May I see your boarding pass?",
+          "direction": "tr->en",
+          "forced": [
+            "TK1862"
+          ]
+        },
+        {
+          "n": 5,
+          "speaker": "passenger",
+          "lang": "en",
+          "text": "Here it is. Did I make it in time?"
+        },
+        {
+          "n": 6,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Buyurun. Yetiştim mi?",
+          "direction": "en->tr"
+        },
+        {
+          "n": 7,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Evet, yetiştiniz. Biniş 14:35'te başlayacak. Koltuğunuz 23A. Grup 2 olarak çağrılacaksınız, lütfen anonsları bekleyin.",
+          "data_refs": [
+            "boardingTime",
+            "assignedSeat",
+            "boardingZone"
+          ]
+        },
+        {
+          "n": 8,
+          "speaker": "system",
+          "lang": "en",
+          "text": "Yes, you made it. Boarding starts at 14:35. Your seat is 23A. You'll be called with group 2, please listen for the announcements.",
+          "direction": "tr->en",
+          "forced": [
+            "14:35",
+            "23A",
+            "2"
+          ]
+        },
+        {
+          "n": 9,
+          "speaker": "passenger",
+          "lang": "en",
+          "text": "Thank you so much."
+        },
+        {
+          "n": 10,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Çok teşekkür ederim.",
+          "direction": "en->tr"
+        }
+      ]
+    },
+    "ar": {
+      "rtl": true,
+      "turns": [
+        {
+          "n": 1,
+          "speaker": "passenger",
+          "lang": "ar",
+          "text": "عذراً، هل هذه بوابة الصعود إلى روما؟",
+          "terms": [
+            "gate"
+          ]
+        },
+        {
+          "n": 2,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Pardon, Roma'ya biniş kapısı bu mu?",
+          "direction": "ar->tr",
+          "forced": [
+            "gate->kapı"
+          ]
+        },
+        {
+          "n": 3,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Evet, doğru yerdesiniz. Roma uçuşu, TK1862. Biniş kartınızı görebilir miyim?",
+          "data_refs": [
+            "flightNumber"
+          ]
+        },
+        {
+          "n": 4,
+          "speaker": "system",
+          "lang": "ar",
+          "text": "نعم، أنت في المكان الصحيح. رحلة إلى روما، TK1862. هل يمكنني رؤية بطاقة الصعود؟",
+          "direction": "tr->ar",
+          "forced": [
+            "TK1862"
+          ]
+        },
+        {
+          "n": 5,
+          "speaker": "passenger",
+          "lang": "ar",
+          "text": "تفضل. هل وصلت في الوقت المناسب؟"
+        },
+        {
+          "n": 6,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Buyurun. Vaktinde geldim mi?",
+          "direction": "ar->tr"
+        },
+        {
+          "n": 7,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Evet, yetiştiniz. Biniş 14:35'te başlayacak. Koltuğunuz 23A. Grup 2 olarak çağrılacaksınız, lütfen anonsları bekleyin.",
+          "data_refs": [
+            "boardingTime",
+            "assignedSeat",
+            "boardingZone"
+          ]
+        },
+        {
+          "n": 8,
+          "speaker": "system",
+          "lang": "ar",
+          "text": "نعم، وصلت في الوقت. سيبدأ الصعود في الساعة 14:35. مقعدك 23A. سيتم استدعاؤك مع المجموعة 2، يرجى الانتباه للإعلانات.",
+          "direction": "tr->ar",
+          "forced": [
+            "14:35",
+            "23A",
+            "2"
+          ]
+        },
+        {
+          "n": 9,
+          "speaker": "passenger",
+          "lang": "ar",
+          "text": "شكراً جزيلاً."
+        },
+        {
+          "n": 10,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Çok teşekkür ederim.",
+          "direction": "ar->tr"
+        }
+      ]
+    },
+    "ru": {
+      "turns": [
+        {
+          "n": 1,
+          "speaker": "passenger",
+          "lang": "ru",
+          "text": "Извините, это выход на посадку на Рим?",
+          "terms": [
+            "gate"
+          ]
+        },
+        {
+          "n": 2,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Pardon, Roma'ya biniş kapısı bu mu?",
+          "direction": "ru->tr",
+          "forced": [
+            "gate->kapı"
+          ]
+        },
+        {
+          "n": 3,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Evet, doğru yerdesiniz. Roma uçuşu, TK1862. Biniş kartınızı görebilir miyim?",
+          "data_refs": [
+            "flightNumber"
+          ]
+        },
+        {
+          "n": 4,
+          "speaker": "system",
+          "lang": "ru",
+          "text": "Да, вы в правильном месте. Рейс в Рим, TK1862. Можно посмотреть ваш посадочный талон?",
+          "direction": "tr->ru",
+          "forced": [
+            "TK1862"
+          ]
+        },
+        {
+          "n": 5,
+          "speaker": "passenger",
+          "lang": "ru",
+          "text": "Вот, пожалуйста. Я успел вовремя?"
+        },
+        {
+          "n": 6,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Buyurun. Vaktinde yetiştim mi?",
+          "direction": "ru->tr"
+        },
+        {
+          "n": 7,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Evet, yetiştiniz. Biniş 14:35'te başlayacak. Koltuğunuz 23A. Grup 2 olarak çağrılacaksınız, lütfen anonsları bekleyin.",
+          "data_refs": [
+            "boardingTime",
+            "assignedSeat",
+            "boardingZone"
+          ]
+        },
+        {
+          "n": 8,
+          "speaker": "system",
+          "lang": "ru",
+          "text": "Да, успели. Посадка начнётся в 14:35. Ваше место 23A. Вас вызовут с группой 2, пожалуйста, ждите объявлений.",
+          "direction": "tr->ru",
+          "forced": [
+            "14:35",
+            "23A",
+            "2"
+          ]
+        },
+        {
+          "n": 9,
+          "speaker": "passenger",
+          "lang": "ru",
+          "text": "Большое спасибо."
+        },
+        {
+          "n": 10,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Çok teşekkür ederim.",
+          "direction": "ru->tr"
+        }
+      ]
+    }
+  }
+}

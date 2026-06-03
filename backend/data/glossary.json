@@ -1,0 +1,4820 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "term_count": 192,
+    "languages": [
+      "tr",
+      "en",
+      "it",
+      "ar",
+      "ru"
+    ],
+    "pivot_language": "tr",
+    "passenger_languages": [
+      "en",
+      "it",
+      "ar",
+      "ru"
+    ],
+    "source_summary": {
+      "DHMI": "Devlet Hava Meydanları İşletmesi Havacılık Terimleri Sözlüğü (TR)",
+      "ICAO": "International Civil Aviation Organization (multi-lang, incl. AR/RU)",
+      "UNTERM": "UN Terminology Database (multi-lang, incl. AR/RU)",
+      "IATE": "EU Inter-Active Terminology for Europe (EN/IT)",
+      "IATA": "International Air Transport Association",
+      "THY": "Turkish Airlines passenger guides",
+      "IGA": "Istanbul Airport / iGA",
+      "EU": "European Union official terminology",
+      "public": "General airport passenger guides and standard usage"
+    },
+    "confidence_legend": {
+      "high": "Otoriter kaynak veya standart havacılık terimi",
+      "medium": "Yaygın kullanım ama tek otoriter kaynak yok; anadil kontrolü tavsiye edilir",
+      "review_needed": "AR/RU özellikle anadil konuşurundan geçirilmeli"
+    },
+    "force_legend": {
+      "true": "Deterministik son-işlem zorunlu (kapı no, uçuş kodu, saat, vb.)",
+      "false": "LLM çevirisine güvenilebilir"
+    },
+    "scope_note": "200+ terimlik havuz: 5 senaryo (check-in, boarding, security, passport, transfer) + uçuş içi + bilgi/hizmet + yön. Demoda tüm terimler aktif olmayabilir, alaka filtresi tab + cümleye göre seçer.",
+    "review_notes": [
+      "AR ve RU karşılıkları: yaygın terimlerde güvenilir, niş terimlerde (EES, IWC, PRM, remote_stand vb.) anadil kontrolü demo öncesi şart.",
+      "IT tarafı: havacılık terminolojisi tutarlı, marka adları (Istanbul World Connect gibi) çevirilmeden bırakıldı.",
+      "TR tarafı: DHMİ Havacılık Terimleri Sözlüğü + THY yolcu rehberi kaynaklarıyla doğrulanmış."
+    ]
+  },
+  "terms": [
+    {
+      "term_id": "gate",
+      "type": "entity",
+      "touchpoints": [
+        "boarding",
+        "transfer"
+      ],
+      "force": true,
+      "lang": {
+        "tr": "kapı",
+        "en": "gate",
+        "it": "gate",
+        "ar": "بوابة الصعود",
+        "ru": "выход на посадку"
+      },
+      "aliases": {
+        "tr": [
+          "çıkış",
+          "kapı no",
+          "biniş kapısı",
+          "uçuş kapısı"
+        ],
+        "en": [
+          "boarding gate"
+        ],
+        "it": [
+          "uscita",
+          "porta d'imbarco"
+        ]
+      },
+      "confidence": "high",
+      "source": "DHMI+ICAO+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "flight_number",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "boarding",
+        "transfer",
+        "security",
+        "passport"
+      ],
+      "force": true,
+      "lang": {
+        "tr": "uçuş numarası",
+        "en": "flight number",
+        "it": "numero di volo",
+        "ar": "رقم الرحلة",
+        "ru": "номер рейса"
+      },
+      "aliases": {
+        "tr": [
+          "uçuş no",
+          "sefer no"
+        ],
+        "en": [
+          "flight no"
+        ],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "DHMI+ICAO+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "boarding",
+      "type": "entity",
+      "touchpoints": [
+        "boarding"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "biniş",
+        "en": "boarding",
+        "it": "imbarco",
+        "ar": "الصعود إلى الطائرة",
+        "ru": "посадка"
+      },
+      "aliases": {
+        "tr": [
+          "uçağa biniş"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "DHMI+THY",
+      "note": ""
+    },
+    {
+      "term_id": "boarding_pass",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "boarding"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "biniş kartı",
+        "en": "boarding pass",
+        "it": "carta d'imbarco",
+        "ar": "بطاقة الصعود",
+        "ru": "посадочный талон"
+      },
+      "aliases": {
+        "tr": [
+          "biniş kartım"
+        ],
+        "en": [
+          "boarding card"
+        ],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "DHMI+THY",
+      "note": ""
+    },
+    {
+      "term_id": "mobile_boarding_pass",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "boarding"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "mobil biniş kartı",
+        "en": "mobile boarding pass",
+        "it": "carta d'imbarco mobile",
+        "ar": "بطاقة الصعود الإلكترونية",
+        "ru": "электронный посадочный талон"
+      },
+      "aliases": {
+        "tr": [
+          "dijital biniş kartı",
+          "elektronik biniş kartı"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "THY+IGA",
+      "note": ""
+    },
+    {
+      "term_id": "boarding_time",
+      "type": "entity",
+      "touchpoints": [
+        "boarding"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "biniş saati",
+        "en": "boarding time",
+        "it": "orario d'imbarco",
+        "ar": "وقت الصعود",
+        "ru": "время посадки"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "DHMI+THY",
+      "note": ""
+    },
+    {
+      "term_id": "boarding_zone",
+      "type": "entity",
+      "touchpoints": [
+        "boarding"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "biniş bölgesi",
+        "en": "boarding zone",
+        "it": "gruppo d'imbarco",
+        "ar": "منطقة الصعود",
+        "ru": "зона посадки"
+      },
+      "aliases": {
+        "tr": [
+          "biniş grubu",
+          "grup"
+        ],
+        "en": [
+          "group"
+        ],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "THY+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "priority_boarding",
+      "type": "phrase",
+      "touchpoints": [
+        "boarding"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "öncelikli biniş",
+        "en": "priority boarding",
+        "it": "imbarco prioritario",
+        "ar": "صعود الأولوية",
+        "ru": "приоритетная посадка"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "THY+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "fast_track",
+      "type": "phrase",
+      "touchpoints": [
+        "boarding",
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "hızlı geçiş",
+        "en": "fast track",
+        "it": "fast track",
+        "ar": "المسار السريع",
+        "ru": "ускоренный проход"
+      },
+      "aliases": {
+        "tr": [
+          "hızlı kanal",
+          "fast track"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IGA+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "final_call",
+      "type": "phrase",
+      "touchpoints": [
+        "boarding"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "son çağrı",
+        "en": "final call",
+        "it": "ultima chiamata",
+        "ar": "النداء الأخير",
+        "ru": "последнее приглашение на посадку"
+      },
+      "aliases": {
+        "tr": [
+          "son anons"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "DHMI+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "gate_closed",
+      "type": "phrase",
+      "touchpoints": [
+        "boarding"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "kapı kapandı",
+        "en": "gate closed",
+        "it": "gate chiuso",
+        "ar": "البوابة مغلقة",
+        "ru": "выход закрыт"
+      },
+      "aliases": {
+        "tr": [
+          "biniş kapandı"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "THY+ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "gate_change",
+      "type": "phrase",
+      "touchpoints": [
+        "boarding"
+      ],
+      "force": true,
+      "lang": {
+        "tr": "kapı değişikliği",
+        "en": "gate change",
+        "it": "cambio gate",
+        "ar": "تغيير البوابة",
+        "ru": "смена выхода"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+THY",
+      "note": "Force çünkü yeni kapı no mock veriden gelir"
+    },
+    {
+      "term_id": "delay",
+      "type": "entity",
+      "touchpoints": [
+        "boarding",
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "gecikme",
+        "en": "delay",
+        "it": "ritardo",
+        "ar": "تأخير",
+        "ru": "задержка"
+      },
+      "aliases": {
+        "tr": [
+          "rötar",
+          "rötarlı"
+        ],
+        "en": [
+          "delayed"
+        ],
+        "it": [
+          "in ritardo"
+        ]
+      },
+      "confidence": "high",
+      "source": "DHMI+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "qr_code",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "boarding"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "QR kod",
+        "en": "QR code",
+        "it": "codice QR",
+        "ar": "رمز الاستجابة السريعة QR",
+        "ru": "QR-код"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "public",
+      "note": ""
+    },
+    {
+      "term_id": "flight_status",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "boarding",
+        "transfer",
+        "security",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "uçuş durumu",
+        "en": "flight status",
+        "it": "stato del volo",
+        "ar": "حالة الرحلة",
+        "ru": "статус рейса"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+IGA",
+      "note": ""
+    },
+    {
+      "term_id": "departure_board",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "boarding",
+        "transfer",
+        "security",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "kalkış panosu",
+        "en": "departure board",
+        "it": "tabellone partenze",
+        "ar": "لوحة المغادرة",
+        "ru": "табло вылета"
+      },
+      "aliases": {
+        "tr": [
+          "kalkış ekranı",
+          "uçuş bilgi ekranı"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IGA+ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "boarding_announcement",
+      "type": "entity",
+      "touchpoints": [
+        "boarding"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "biniş anonsu",
+        "en": "boarding announcement",
+        "it": "annuncio d'imbarco",
+        "ar": "إعلان الصعود",
+        "ru": "объявление о посадке"
+      },
+      "aliases": {
+        "tr": [
+          "anons"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "DHMI",
+      "note": ""
+    },
+    {
+      "term_id": "seat",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "boarding"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "koltuk",
+        "en": "seat",
+        "it": "posto",
+        "ar": "مقعد",
+        "ru": "место"
+      },
+      "aliases": {
+        "tr": [
+          "yer"
+        ],
+        "en": [
+          "seat number"
+        ],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "DHMI+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "seat_window",
+      "type": "phrase",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "pencere kenarı",
+        "en": "window seat",
+        "it": "posto finestrino",
+        "ar": "بجانب النافذة",
+        "ru": "у окна"
+      },
+      "aliases": {
+        "tr": [
+          "pencere",
+          "cam kenarı"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "THY+public",
+      "note": ""
+    },
+    {
+      "term_id": "seat_aisle",
+      "type": "phrase",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "koridor tarafı",
+        "en": "aisle seat",
+        "it": "posto corridoio",
+        "ar": "بجانب الممر",
+        "ru": "у прохода"
+      },
+      "aliases": {
+        "tr": [
+          "koridor"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "THY+public",
+      "note": ""
+    },
+    {
+      "term_id": "emergency_exit_row",
+      "type": "phrase",
+      "touchpoints": [
+        "boarding"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "acil çıkış koltuğu",
+        "en": "emergency exit row",
+        "it": "fila uscita di emergenza",
+        "ar": "صف مخرج الطوارئ",
+        "ru": "ряд аварийного выхода"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "seat_map",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "koltuk haritası",
+        "en": "seat map",
+        "it": "mappa posti",
+        "ar": "خريطة المقاعد",
+        "ru": "схема мест"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "THY+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "cabin_class",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "kabin sınıfı",
+        "en": "cabin class",
+        "it": "classe di cabina",
+        "ar": "درجة المقصورة",
+        "ru": "класс кабины"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA",
+      "note": ""
+    },
+    {
+      "term_id": "check_in",
+      "type": "phrase",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "check-in",
+        "en": "check-in",
+        "it": "check-in / accettazione",
+        "ar": "تسجيل الدخول",
+        "ru": "регистрация на рейс"
+      },
+      "aliases": {
+        "tr": [
+          "uçağa kayıt"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "DHMI+THY+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "online_check_in",
+      "type": "phrase",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "online check-in",
+        "en": "online check-in",
+        "it": "check-in online",
+        "ar": "تسجيل الدخول عبر الإنترنت",
+        "ru": "онлайн-регистрация"
+      },
+      "aliases": {
+        "tr": [
+          "mobil check-in",
+          "internet check-in"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "THY",
+      "note": ""
+    },
+    {
+      "term_id": "self_service_kiosk",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "self-servis kiosk",
+        "en": "self-service kiosk",
+        "it": "chiosco self-service",
+        "ar": "كشك الخدمة الذاتية",
+        "ru": "киоск самообслуживания"
+      },
+      "aliases": {
+        "tr": [
+          "kiosk",
+          "öz hizmet kiosku"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IGA+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "check_in_counter",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "check-in kontuarı",
+        "en": "check-in counter",
+        "it": "banco del check-in",
+        "ar": "مكتب تسجيل الدخول",
+        "ru": "стойка регистрации"
+      },
+      "aliases": {
+        "tr": [
+          "check-in bankosu",
+          "kontuar"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "THY+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "passport",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "pasaport",
+        "en": "passport",
+        "it": "passaporto",
+        "ar": "جواز السفر",
+        "ru": "паспорт"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "DHMI+UNTERM+ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "booking_reference",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "rezervasyon kodu",
+        "en": "booking reference",
+        "it": "codice di prenotazione",
+        "ar": "رقم الحجز",
+        "ru": "номер бронирования"
+      },
+      "aliases": {
+        "tr": [
+          "PNR",
+          "rezervasyon numarası"
+        ],
+        "en": [
+          "PNR",
+          "reservation code"
+        ],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "THY+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "e_ticket",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "elektronik bilet",
+        "en": "e-ticket",
+        "it": "biglietto elettronico",
+        "ar": "تذكرة إلكترونية",
+        "ru": "электронный билет"
+      },
+      "aliases": {
+        "tr": [
+          "e-bilet"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "THY+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "baggage",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "bagaj",
+        "en": "baggage",
+        "it": "bagaglio",
+        "ar": "أمتعة",
+        "ru": "багаж"
+      },
+      "aliases": {
+        "tr": [
+          "valiz",
+          "çanta"
+        ],
+        "en": [
+          "luggage",
+          "bag"
+        ],
+        "it": [
+          "valigia"
+        ]
+      },
+      "confidence": "high",
+      "source": "DHMI+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "checked_baggage",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "kayıtlı bagaj",
+        "en": "checked baggage",
+        "it": "bagaglio registrato",
+        "ar": "الأمتعة المسجَّلة",
+        "ru": "зарегистрированный багаж"
+      },
+      "aliases": {
+        "tr": [
+          "teslim bagajı"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "DHMI+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "hand_baggage",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "security"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "el bagajı",
+        "en": "hand baggage",
+        "it": "bagaglio a mano",
+        "ar": "الأمتعة اليدوية",
+        "ru": "ручная кладь"
+      },
+      "aliases": {
+        "tr": [
+          "kabin bagajı",
+          "yanımdaki çanta"
+        ],
+        "en": [
+          "carry-on",
+          "carry on bag"
+        ],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "DHMI+IATA+THY",
+      "note": ""
+    },
+    {
+      "term_id": "cabin_baggage",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "security"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "kabin bagajı",
+        "en": "cabin baggage",
+        "it": "bagaglio a mano",
+        "ar": "أمتعة المقصورة",
+        "ru": "багаж в салон"
+      },
+      "aliases": {
+        "tr": [
+          "el bagajı"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "DHMI+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "baggage_allowance",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "bagaj hakkı",
+        "en": "baggage allowance",
+        "it": "franchigia bagaglio",
+        "ar": "وزن الأمتعة المسموح به",
+        "ru": "норма провоза багажа"
+      },
+      "aliases": {
+        "tr": [
+          "bagaj limiti"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "DHMI+THY+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "excess_baggage",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "fazla bagaj",
+        "en": "excess baggage",
+        "it": "bagaglio in eccesso",
+        "ar": "الأمتعة الزائدة",
+        "ru": "сверхнормативный багаж"
+      },
+      "aliases": {
+        "tr": [
+          "fazla kilo"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "THY+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "extra_baggage",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "ekstra bagaj",
+        "en": "extra baggage",
+        "it": "bagaglio extra",
+        "ar": "أمتعة إضافية",
+        "ru": "дополнительный багаж"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "THY+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "baggage_weight",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "bagaj ağırlığı",
+        "en": "baggage weight",
+        "it": "peso del bagaglio",
+        "ar": "وزن الأمتعة",
+        "ru": "вес багажа"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "THY+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "baggage_tag",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "bagaj etiketi",
+        "en": "baggage tag",
+        "it": "etichetta bagaglio",
+        "ar": "بطاقة الأمتعة",
+        "ru": "багажная бирка"
+      },
+      "aliases": {
+        "tr": [
+          "valiz etiketi"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+THY",
+      "note": ""
+    },
+    {
+      "term_id": "baggage_belt",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "bagaj bandı",
+        "en": "baggage belt",
+        "it": "nastro bagagli",
+        "ar": "حزام الأمتعة",
+        "ru": "лента багажа"
+      },
+      "aliases": {
+        "tr": [
+          "bagaj alma bandı",
+          "bant"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA",
+      "note": ""
+    },
+    {
+      "term_id": "baggage_carousel",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "bagaj alma bandı",
+        "en": "baggage carousel",
+        "it": "nastro di consegna",
+        "ar": "سير الأمتعة",
+        "ru": "багажная карусель"
+      },
+      "aliases": {
+        "tr": [
+          "bagaj karuseli"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA",
+      "note": ""
+    },
+    {
+      "term_id": "baggage_claim",
+      "type": "entity",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "bagaj alma alanı",
+        "en": "baggage claim",
+        "it": "ritiro bagagli",
+        "ar": "استلام الأمتعة",
+        "ru": "получение багажа"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+IGA",
+      "note": ""
+    },
+    {
+      "term_id": "special_baggage",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "özel bagaj",
+        "en": "special baggage",
+        "it": "bagaglio speciale",
+        "ar": "أمتعة خاصة",
+        "ru": "специальный багаж"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "THY+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "sports_equipment",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "spor ekipmanı",
+        "en": "sports equipment",
+        "it": "attrezzatura sportiva",
+        "ar": "معدات رياضية",
+        "ru": "спортивное снаряжение"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "THY+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "musical_instrument",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "müzik aleti",
+        "en": "musical instrument",
+        "it": "strumento musicale",
+        "ar": "آلة موسيقية",
+        "ru": "музыкальный инструмент"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "THY+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "fragile",
+      "type": "phrase",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "kırılgan",
+        "en": "fragile",
+        "it": "fragile",
+        "ar": "قابل للكسر",
+        "ru": "хрупкий"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "public+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "heavy_item",
+      "type": "phrase",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "ağır eşya",
+        "en": "heavy item",
+        "it": "oggetto pesante",
+        "ar": "غرض ثقيل",
+        "ru": "тяжёлый предмет"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "public",
+      "note": ""
+    },
+    {
+      "term_id": "economy_class",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "ekonomi sınıfı",
+        "en": "economy class",
+        "it": "classe economica",
+        "ar": "الدرجة الاقتصادية",
+        "ru": "эконом-класс"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+THY",
+      "note": ""
+    },
+    {
+      "term_id": "business_class",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "business sınıfı",
+        "en": "business class",
+        "it": "classe business",
+        "ar": "درجة رجال الأعمال",
+        "ru": "бизнес-класс"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+THY",
+      "note": ""
+    },
+    {
+      "term_id": "visa",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "vize",
+        "en": "visa",
+        "it": "visto",
+        "ar": "تأشيرة",
+        "ru": "виза"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "UNTERM+ICAO+DHMI",
+      "note": ""
+    },
+    {
+      "term_id": "transit_visa",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "passport",
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "transit vize",
+        "en": "transit visa",
+        "it": "visto di transito",
+        "ar": "تأشيرة عبور",
+        "ru": "транзитная виза"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "UNTERM+ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "e_visa",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "e-vize",
+        "en": "e-visa",
+        "it": "visto elettronico",
+        "ar": "تأشيرة إلكترونية",
+        "ru": "электронная виза"
+      },
+      "aliases": {
+        "tr": [
+          "elektronik vize"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "public+ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "child_passenger",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "çocuk yolcu",
+        "en": "child passenger",
+        "it": "passeggero bambino",
+        "ar": "راكب طفل",
+        "ru": "ребёнок-пассажир"
+      },
+      "aliases": {
+        "tr": [
+          "çocuk"
+        ],
+        "en": [
+          "child"
+        ],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "infant_passenger",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "bebek yolcu",
+        "en": "infant passenger",
+        "it": "passeggero neonato",
+        "ar": "راكب رضيع",
+        "ru": "пассажир-младенец"
+      },
+      "aliases": {
+        "tr": [
+          "bebek"
+        ],
+        "en": [
+          "infant"
+        ],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "unaccompanied_minor",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "refakatsiz çocuk",
+        "en": "unaccompanied minor",
+        "it": "minore non accompagnato",
+        "ar": "قاصر غير مصحوب",
+        "ru": "несопровождаемый несовершеннолетний"
+      },
+      "aliases": {
+        "tr": [
+          "yalnız seyahat eden çocuk"
+        ],
+        "en": [
+          "UMNR"
+        ],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "prm",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "engelli yolcu",
+        "en": "passenger with reduced mobility",
+        "it": "passeggero a mobilità ridotta",
+        "ar": "راكب من ذوي الإعاقة الحركية",
+        "ru": "пассажир с ограниченной подвижностью"
+      },
+      "aliases": {
+        "tr": [
+          "hareket kısıtlı yolcu",
+          "PRM"
+        ],
+        "en": [
+          "PRM"
+        ],
+        "it": []
+      },
+      "confidence": "medium",
+      "source": "ICAO+IATA",
+      "note": "Hassas kategori; demoda dikkatli kullanım"
+    },
+    {
+      "term_id": "wheelchair_assistance",
+      "type": "phrase",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "tekerlekli sandalye yardımı",
+        "en": "wheelchair assistance",
+        "it": "assistenza con sedia a rotelle",
+        "ar": "مساعدة بكرسي متحرك",
+        "ru": "помощь в инвалидной коляске"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "special_meal",
+      "type": "phrase",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "özel yemek",
+        "en": "special meal",
+        "it": "pasto speciale",
+        "ar": "وجبة خاصة",
+        "ru": "специальное питание"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+THY",
+      "note": ""
+    },
+    {
+      "term_id": "vegan_meal",
+      "type": "phrase",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "vegan yemek",
+        "en": "vegan meal",
+        "it": "pasto vegano",
+        "ar": "وجبة نباتية صرفة",
+        "ru": "веганская еда"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "THY+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "halal_meal",
+      "type": "phrase",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "helal yemek",
+        "en": "halal meal",
+        "it": "pasto halal",
+        "ar": "وجبة حلال",
+        "ru": "халяльная еда"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "THY+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "kosher_meal",
+      "type": "phrase",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "koşer yemek",
+        "en": "kosher meal",
+        "it": "pasto kosher",
+        "ar": "وجبة كوشير",
+        "ru": "кошерная еда"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "THY+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "pet",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "evcil hayvan",
+        "en": "pet",
+        "it": "animale domestico",
+        "ar": "حيوان أليف",
+        "ru": "домашнее животное"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+THY",
+      "note": ""
+    },
+    {
+      "term_id": "service_animal",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "hizmet hayvanı",
+        "en": "service animal",
+        "it": "animale di servizio",
+        "ar": "حيوان خدمة",
+        "ru": "служебное животное"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "pregnant_passenger",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "hamile yolcu",
+        "en": "pregnant passenger",
+        "it": "passeggera in stato di gravidanza",
+        "ar": "راكبة حامل",
+        "ru": "беременная пассажирка"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA",
+      "note": ""
+    },
+    {
+      "term_id": "group_booking",
+      "type": "phrase",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "grup rezervasyon",
+        "en": "group booking",
+        "it": "prenotazione di gruppo",
+        "ar": "حجز جماعي",
+        "ru": "групповое бронирование"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+THY",
+      "note": ""
+    },
+    {
+      "term_id": "fare",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "bilet ücreti",
+        "en": "fare",
+        "it": "tariffa",
+        "ar": "أجرة الرحلة",
+        "ru": "тариф"
+      },
+      "aliases": {
+        "tr": [
+          "ücret"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA",
+      "note": ""
+    },
+    {
+      "term_id": "fare_class",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "ücret sınıfı",
+        "en": "fare class",
+        "it": "classe tariffaria",
+        "ar": "فئة الأجرة",
+        "ru": "тарифный класс"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA",
+      "note": ""
+    },
+    {
+      "term_id": "refund",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "bilet iadesi",
+        "en": "refund",
+        "it": "rimborso",
+        "ar": "استرداد",
+        "ru": "возврат средств"
+      },
+      "aliases": {
+        "tr": [
+          "iade"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+THY",
+      "note": ""
+    },
+    {
+      "term_id": "cancellation",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "iptal",
+        "en": "cancellation",
+        "it": "cancellazione",
+        "ar": "إلغاء",
+        "ru": "отмена"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA",
+      "note": ""
+    },
+    {
+      "term_id": "upgrade",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "yükseltme",
+        "en": "upgrade",
+        "it": "upgrade",
+        "ar": "ترقية",
+        "ru": "повышение класса"
+      },
+      "aliases": {
+        "tr": [
+          "sınıf yükseltme"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+THY",
+      "note": ""
+    },
+    {
+      "term_id": "open_ticket",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "açık bilet",
+        "en": "open ticket",
+        "it": "biglietto aperto",
+        "ar": "تذكرة مفتوحة",
+        "ru": "открытый билет"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "medium",
+      "source": "IATA",
+      "note": ""
+    },
+    {
+      "term_id": "waitlist",
+      "type": "entity",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "bekleme listesi",
+        "en": "waitlist",
+        "it": "lista d'attesa",
+        "ar": "قائمة الانتظار",
+        "ru": "лист ожидания"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA",
+      "note": ""
+    },
+    {
+      "term_id": "no_show",
+      "type": "phrase",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "gelmeyen yolcu",
+        "en": "no-show",
+        "it": "no-show",
+        "ar": "عدم الحضور",
+        "ru": "неявка"
+      },
+      "aliases": {
+        "tr": [
+          "no-show"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA",
+      "note": ""
+    },
+    {
+      "term_id": "date_change",
+      "type": "phrase",
+      "touchpoints": [
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "tarih değişikliği",
+        "en": "date change",
+        "it": "cambio data",
+        "ar": "تغيير التاريخ",
+        "ru": "изменение даты"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+THY",
+      "note": ""
+    },
+    {
+      "term_id": "connecting_flight",
+      "type": "entity",
+      "touchpoints": [
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "bağlantılı uçuş",
+        "en": "connecting flight",
+        "it": "volo in coincidenza",
+        "ar": "الرحلة المتصلة",
+        "ru": "стыковочный рейс"
+      },
+      "aliases": {
+        "tr": [
+          "aktarmalı uçuş",
+          "bağlantı uçuşu"
+        ],
+        "en": [],
+        "it": [
+          "coincidenza"
+        ]
+      },
+      "confidence": "high",
+      "source": "IATA+ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "transfer",
+      "type": "phrase",
+      "touchpoints": [
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "aktarma",
+        "en": "transfer",
+        "it": "trasferimento",
+        "ar": "الترانزيت",
+        "ru": "пересадка"
+      },
+      "aliases": {
+        "tr": [
+          "transfer"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+IGA",
+      "note": ""
+    },
+    {
+      "term_id": "transit",
+      "type": "phrase",
+      "touchpoints": [
+        "transfer",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "transit",
+        "en": "transit",
+        "it": "transito",
+        "ar": "ترانزيت / عبور",
+        "ru": "транзит"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "transit_passenger",
+      "type": "entity",
+      "touchpoints": [
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "transit yolcu",
+        "en": "transit passenger",
+        "it": "passeggero in transito",
+        "ar": "راكب الترانزيت",
+        "ru": "транзитный пассажир"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+IGA",
+      "note": ""
+    },
+    {
+      "term_id": "layover",
+      "type": "entity",
+      "touchpoints": [
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "aktarma süresi",
+        "en": "layover",
+        "it": "scalo",
+        "ar": "فترة التوقف",
+        "ru": "длительная пересадка"
+      },
+      "aliases": {
+        "tr": [
+          "bekleme"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA",
+      "note": ""
+    },
+    {
+      "term_id": "connection_time",
+      "type": "entity",
+      "touchpoints": [
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "bağlantı süresi",
+        "en": "connection time",
+        "it": "tempo di coincidenza",
+        "ar": "وقت الاتصال",
+        "ru": "время на пересадку"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+IGA",
+      "note": ""
+    },
+    {
+      "term_id": "missed_connection",
+      "type": "phrase",
+      "touchpoints": [
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "kaçırılan bağlantı",
+        "en": "missed connection",
+        "it": "coincidenza persa",
+        "ar": "اتصال فائت",
+        "ru": "пропущенная пересадка"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+THY",
+      "note": ""
+    },
+    {
+      "term_id": "rebooking",
+      "type": "entity",
+      "touchpoints": [
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "yeniden rezervasyon",
+        "en": "rebooking",
+        "it": "nuova prenotazione",
+        "ar": "إعادة الحجز",
+        "ru": "перебронирование"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+THY",
+      "note": ""
+    },
+    {
+      "term_id": "transfer_security",
+      "type": "phrase",
+      "touchpoints": [
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "transfer güvenlik",
+        "en": "transfer security",
+        "it": "controllo di sicurezza transiti",
+        "ar": "تفتيش أمني للترانزيت",
+        "ru": "транзитный досмотр"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IGA+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "transit_passport_control",
+      "type": "phrase",
+      "touchpoints": [
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "transit pasaport kontrolü",
+        "en": "transit passport control",
+        "it": "controllo passaporti transiti",
+        "ar": "مراقبة جوازات الترانزيت",
+        "ru": "транзитный паспортный контроль"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "medium",
+      "source": "IGA",
+      "note": ""
+    },
+    {
+      "term_id": "transfer_desk",
+      "type": "entity",
+      "touchpoints": [
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "transfer kontuarı",
+        "en": "transfer desk",
+        "it": "banco trasferimenti",
+        "ar": "مكتب الترانزيت",
+        "ru": "трансферная стойка"
+      },
+      "aliases": {
+        "tr": [
+          "transfer bankosu"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IGA+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "transfer_hall",
+      "type": "entity",
+      "touchpoints": [
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "transfer holü",
+        "en": "transfer hall",
+        "it": "sala trasferimenti",
+        "ar": "صالة الترانزيت",
+        "ru": "транзитный зал"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IGA",
+      "note": ""
+    },
+    {
+      "term_id": "shuttle_bus",
+      "type": "entity",
+      "touchpoints": [
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "servis aracı",
+        "en": "shuttle bus",
+        "it": "navetta",
+        "ar": "حافلة نقل",
+        "ru": "автобус-шаттл"
+      },
+      "aliases": {
+        "tr": [
+          "shuttle",
+          "otobüs"
+        ],
+        "en": [
+          "shuttle"
+        ],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IGA+public",
+      "note": ""
+    },
+    {
+      "term_id": "corridor",
+      "type": "entity",
+      "touchpoints": [
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "koridor",
+        "en": "corridor",
+        "it": "corridoio",
+        "ar": "ممر",
+        "ru": "коридор"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "public+IGA",
+      "note": ""
+    },
+    {
+      "term_id": "duty_free",
+      "type": "entity",
+      "touchpoints": [
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "duty-free",
+        "en": "duty-free",
+        "it": "duty-free",
+        "ar": "السوق الحرة",
+        "ru": "duty-free / беспошлинная зона"
+      },
+      "aliases": {
+        "tr": [
+          "gümrüksüz mağaza"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+IGA",
+      "note": ""
+    },
+    {
+      "term_id": "lounge",
+      "type": "entity",
+      "touchpoints": [
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "bekleme salonu",
+        "en": "lounge",
+        "it": "lounge / sala VIP",
+        "ar": "صالة الانتظار",
+        "ru": "зал ожидания / лаунж"
+      },
+      "aliases": {
+        "tr": [
+          "lounge",
+          "salonu"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+IGA",
+      "note": ""
+    },
+    {
+      "term_id": "meet_and_greet",
+      "type": "phrase",
+      "touchpoints": [
+        "transfer",
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "karşılama hizmeti",
+        "en": "meet and greet",
+        "it": "servizio meet and greet",
+        "ar": "خدمة الاستقبال والترحيب",
+        "ru": "встреча и сопровождение"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "medium",
+      "source": "IGA",
+      "note": ""
+    },
+    {
+      "term_id": "flight_information_display",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "boarding",
+        "transfer",
+        "security",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "uçuş bilgi ekranı",
+        "en": "flight information display",
+        "it": "monitor informazioni voli",
+        "ar": "شاشة معلومات الرحلات",
+        "ru": "табло информации о рейсах"
+      },
+      "aliases": {
+        "tr": [
+          "FIDS",
+          "uçuş ekranı"
+        ],
+        "en": [
+          "FIDS"
+        ],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+IGA",
+      "note": ""
+    },
+    {
+      "term_id": "terminal_map",
+      "type": "entity",
+      "touchpoints": [
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "terminal haritası",
+        "en": "terminal map",
+        "it": "mappa del terminal",
+        "ar": "خريطة المبنى",
+        "ru": "карта терминала"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IGA+public",
+      "note": ""
+    },
+    {
+      "term_id": "baggage_transfer",
+      "type": "phrase",
+      "touchpoints": [
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "bagaj transferi",
+        "en": "baggage transfer",
+        "it": "trasferimento bagagli",
+        "ar": "نقل الأمتعة",
+        "ru": "перевозка багажа"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA",
+      "note": ""
+    },
+    {
+      "term_id": "baggage_tracing",
+      "type": "phrase",
+      "touchpoints": [
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "bagaj takibi",
+        "en": "baggage tracing",
+        "it": "tracciamento bagagli",
+        "ar": "تتبع الأمتعة",
+        "ru": "отслеживание багажа"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+THY",
+      "note": ""
+    },
+    {
+      "term_id": "departure_gate",
+      "type": "entity",
+      "touchpoints": [
+        "boarding",
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "kalkış kapısı",
+        "en": "departure gate",
+        "it": "gate di partenza",
+        "ar": "بوابة المغادرة",
+        "ru": "выход на вылет"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA",
+      "note": ""
+    },
+    {
+      "term_id": "arrival_gate",
+      "type": "entity",
+      "touchpoints": [
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "varış kapısı",
+        "en": "arrival gate",
+        "it": "gate di arrivo",
+        "ar": "بوابة الوصول",
+        "ru": "выход прибытия"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA",
+      "note": ""
+    },
+    {
+      "term_id": "apron",
+      "type": "entity",
+      "touchpoints": [
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "apron / park sahası",
+        "en": "apron",
+        "it": "piazzale",
+        "ar": "ساحة وقوف الطائرات",
+        "ru": "перрон"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "medium",
+      "source": "ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "jet_bridge",
+      "type": "entity",
+      "touchpoints": [
+        "boarding",
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "jet köprüsü",
+        "en": "jet bridge",
+        "it": "pontile d'imbarco",
+        "ar": "جسر الطائرة",
+        "ru": "телетрап"
+      },
+      "aliases": {
+        "tr": [
+          "körüklü kapı"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "remote_stand",
+      "type": "entity",
+      "touchpoints": [
+        "boarding",
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "uzak park",
+        "en": "remote stand",
+        "it": "stand remoto",
+        "ar": "موقف بعيد",
+        "ru": "удалённая стоянка"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "medium",
+      "source": "IATA+ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "istanbul_world_connect",
+      "type": "entity",
+      "touchpoints": [
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "Istanbul World Connect",
+        "en": "Istanbul World Connect",
+        "it": "Istanbul World Connect",
+        "ar": "Istanbul World Connect",
+        "ru": "Istanbul World Connect"
+      },
+      "aliases": {
+        "tr": [
+          "IWC"
+        ],
+        "en": [
+          "IWC"
+        ],
+        "it": []
+      },
+      "confidence": "medium",
+      "source": "IGA",
+      "note": "Marka adı, çevirilmez"
+    },
+    {
+      "term_id": "terminal",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "boarding",
+        "transfer",
+        "security",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "terminal",
+        "en": "terminal",
+        "it": "terminal",
+        "ar": "المبنى / الصالة",
+        "ru": "терминал"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+IGA",
+      "note": ""
+    },
+    {
+      "term_id": "security_check",
+      "type": "phrase",
+      "touchpoints": [
+        "security"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "güvenlik kontrolü",
+        "en": "security check",
+        "it": "controllo di sicurezza",
+        "ar": "تفتيش أمني",
+        "ru": "досмотр"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+IGA",
+      "note": ""
+    },
+    {
+      "term_id": "security_screening",
+      "type": "phrase",
+      "touchpoints": [
+        "security"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "güvenlik taraması",
+        "en": "security screening",
+        "it": "screening di sicurezza",
+        "ar": "فحص أمني",
+        "ru": "досмотровый контроль"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "liquid_rule_100ml",
+      "type": "phrase",
+      "touchpoints": [
+        "security"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "100 ml sıvı kuralı",
+        "en": "100ml liquid rule",
+        "it": "regola dei 100 ml",
+        "ar": "قاعدة 100 مل للسوائل",
+        "ru": "правило 100 мл для жидкостей"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+EU+public",
+      "note": ""
+    },
+    {
+      "term_id": "liquids_aerosols_gels",
+      "type": "phrase",
+      "touchpoints": [
+        "security"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "sıvılar, aerosoller, jeller",
+        "en": "liquids, aerosols, gels (LAGs)",
+        "it": "liquidi, aerosol, gel",
+        "ar": "السوائل، الإيروسولات، الجل",
+        "ru": "жидкости, аэрозоли, гели"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [
+          "LAGs"
+        ],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+public",
+      "note": ""
+    },
+    {
+      "term_id": "clear_plastic_bag",
+      "type": "phrase",
+      "touchpoints": [
+        "security"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "şeffaf torba",
+        "en": "clear plastic bag",
+        "it": "sacchetto trasparente",
+        "ar": "كيس بلاستيكي شفاف",
+        "ru": "прозрачный пакет"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+public",
+      "note": ""
+    },
+    {
+      "term_id": "duty_free_liquid",
+      "type": "phrase",
+      "touchpoints": [
+        "security",
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "duty-free sıvı",
+        "en": "duty-free liquid",
+        "it": "liquido duty-free",
+        "ar": "سائل من السوق الحرة",
+        "ru": "жидкость из duty-free"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+public",
+      "note": ""
+    },
+    {
+      "term_id": "tray",
+      "type": "entity",
+      "touchpoints": [
+        "security"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "tepsi",
+        "en": "tray",
+        "it": "vassoio",
+        "ar": "صينية",
+        "ru": "лоток"
+      },
+      "aliases": {
+        "tr": [
+          "güvenlik tepsisi"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "public+IGA",
+      "note": ""
+    },
+    {
+      "term_id": "laptop",
+      "type": "entity",
+      "touchpoints": [
+        "security"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "dizüstü bilgisayar",
+        "en": "laptop",
+        "it": "computer portatile",
+        "ar": "حاسوب محمول",
+        "ru": "ноутбук"
+      },
+      "aliases": {
+        "tr": [
+          "laptop",
+          "bilgisayar"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "public",
+      "note": ""
+    },
+    {
+      "term_id": "tablet",
+      "type": "entity",
+      "touchpoints": [
+        "security"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "tablet",
+        "en": "tablet",
+        "it": "tablet",
+        "ar": "جهاز لوحي",
+        "ru": "планшет"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "public",
+      "note": ""
+    },
+    {
+      "term_id": "ct_scanner",
+      "type": "entity",
+      "touchpoints": [
+        "security"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "CT tarayıcı",
+        "en": "CT scanner",
+        "it": "scanner CT",
+        "ar": "ماسح CT",
+        "ru": "КТ-сканер"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+IGA",
+      "note": ""
+    },
+    {
+      "term_id": "x_ray_machine",
+      "type": "entity",
+      "touchpoints": [
+        "security"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "X-ray cihazı",
+        "en": "X-ray machine",
+        "it": "macchina a raggi X",
+        "ar": "جهاز الأشعة السينية",
+        "ru": "рентгеновский аппарат"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+public",
+      "note": ""
+    },
+    {
+      "term_id": "metal_detector",
+      "type": "entity",
+      "touchpoints": [
+        "security"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "metal dedektör",
+        "en": "metal detector",
+        "it": "metal detector",
+        "ar": "كاشف المعادن",
+        "ru": "металлоискатель"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+public",
+      "note": ""
+    },
+    {
+      "term_id": "body_scanner",
+      "type": "entity",
+      "touchpoints": [
+        "security"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "vücut tarayıcı",
+        "en": "body scanner",
+        "it": "body scanner",
+        "ar": "ماسح الجسم",
+        "ru": "сканер тела"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "belt",
+      "type": "entity",
+      "touchpoints": [
+        "security"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "kemer",
+        "en": "belt",
+        "it": "cintura",
+        "ar": "حزام",
+        "ru": "ремень"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "public",
+      "note": ""
+    },
+    {
+      "term_id": "shoes",
+      "type": "entity",
+      "touchpoints": [
+        "security"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "ayakkabı",
+        "en": "shoes",
+        "it": "scarpe",
+        "ar": "حذاء",
+        "ru": "обувь"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "public",
+      "note": ""
+    },
+    {
+      "term_id": "pockets",
+      "type": "entity",
+      "touchpoints": [
+        "security"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "cepler",
+        "en": "pockets",
+        "it": "tasche",
+        "ar": "جيوب",
+        "ru": "карманы"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "public",
+      "note": ""
+    },
+    {
+      "term_id": "prohibited_item",
+      "type": "entity",
+      "touchpoints": [
+        "security"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "yasak eşya",
+        "en": "prohibited item",
+        "it": "oggetto vietato",
+        "ar": "غرض ممنوع",
+        "ru": "запрещённый предмет"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "restricted_item",
+      "type": "entity",
+      "touchpoints": [
+        "security"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "kısıtlı eşya",
+        "en": "restricted item",
+        "it": "oggetto limitato",
+        "ar": "غرض مقيد",
+        "ru": "ограниченный предмет"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "medication",
+      "type": "entity",
+      "touchpoints": [
+        "security"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "ilaç",
+        "en": "medication",
+        "it": "farmaco",
+        "ar": "دواء",
+        "ru": "лекарства"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "public+ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "baby_food",
+      "type": "entity",
+      "touchpoints": [
+        "security"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "bebek maması",
+        "en": "baby food",
+        "it": "alimenti per bebè",
+        "ar": "طعام الأطفال",
+        "ru": "детское питание"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "public",
+      "note": ""
+    },
+    {
+      "term_id": "power_bank",
+      "type": "entity",
+      "touchpoints": [
+        "security",
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "power bank",
+        "en": "power bank",
+        "it": "power bank",
+        "ar": "بطارية محمولة",
+        "ru": "пауэрбанк / внешний аккумулятор"
+      },
+      "aliases": {
+        "tr": [
+          "taşınabilir şarj",
+          "harici batarya"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "lithium_battery",
+      "type": "entity",
+      "touchpoints": [
+        "security",
+        "check-in"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "lityum pil",
+        "en": "lithium battery",
+        "it": "batteria al litio",
+        "ar": "بطارية ليثيوم",
+        "ru": "литиевая батарея"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "lighter",
+      "type": "entity",
+      "touchpoints": [
+        "security"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "çakmak",
+        "en": "lighter",
+        "it": "accendino",
+        "ar": "ولاعة",
+        "ru": "зажигалка"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "knife",
+      "type": "entity",
+      "touchpoints": [
+        "security"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "bıçak",
+        "en": "knife",
+        "it": "coltello",
+        "ar": "سكين",
+        "ru": "нож"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+public",
+      "note": ""
+    },
+    {
+      "term_id": "scissors",
+      "type": "entity",
+      "touchpoints": [
+        "security"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "makas",
+        "en": "scissors",
+        "it": "forbici",
+        "ar": "مقص",
+        "ru": "ножницы"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+public",
+      "note": ""
+    },
+    {
+      "term_id": "hand_search",
+      "type": "phrase",
+      "touchpoints": [
+        "security"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "el araması",
+        "en": "hand search / pat-down",
+        "it": "controllo manuale",
+        "ar": "تفتيش يدوي",
+        "ru": "ручной досмотр"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "secondary_screening",
+      "type": "phrase",
+      "touchpoints": [
+        "security"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "ikinci kontrol",
+        "en": "secondary screening",
+        "it": "controllo secondario",
+        "ar": "تفتيش ثانوي",
+        "ru": "вторичный досмотр"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "passport_control",
+      "type": "phrase",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "pasaport kontrolü",
+        "en": "passport control",
+        "it": "controllo passaporti",
+        "ar": "مراقبة الجوازات",
+        "ru": "паспортный контроль"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "DHMI+ICAO+UNTERM",
+      "note": ""
+    },
+    {
+      "term_id": "immigration",
+      "type": "phrase",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "göçmenlik",
+        "en": "immigration",
+        "it": "immigrazione",
+        "ar": "الهجرة",
+        "ru": "иммиграция"
+      },
+      "aliases": {
+        "tr": [
+          "pasaport kontrolü"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "UNTERM+ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "customs",
+      "type": "phrase",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "gümrük",
+        "en": "customs",
+        "it": "dogana",
+        "ar": "الجمارك",
+        "ru": "таможня"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "UNTERM+DHMI+ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "customs_declaration",
+      "type": "entity",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "gümrük beyanı",
+        "en": "customs declaration",
+        "it": "dichiarazione doganale",
+        "ar": "إقرار جمركي",
+        "ru": "таможенная декларация"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "UNTERM+ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "nothing_to_declare",
+      "type": "phrase",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "beyan edecek bir şey yok",
+        "en": "nothing to declare",
+        "it": "niente da dichiarare",
+        "ar": "لا شيء للإعلان",
+        "ru": "нечего декларировать"
+      },
+      "aliases": {
+        "tr": [
+          "yeşil kuyruk"
+        ],
+        "en": [
+          "green channel"
+        ],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "UNTERM+public",
+      "note": ""
+    },
+    {
+      "term_id": "goods_to_declare",
+      "type": "phrase",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "beyan edilecek mallar",
+        "en": "goods to declare",
+        "it": "merci da dichiarare",
+        "ar": "بضائع للإعلان",
+        "ru": "товары для декларирования"
+      },
+      "aliases": {
+        "tr": [
+          "kırmızı kuyruk"
+        ],
+        "en": [
+          "red channel"
+        ],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "UNTERM+public",
+      "note": ""
+    },
+    {
+      "term_id": "queue",
+      "type": "entity",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "kuyruk",
+        "en": "queue / line",
+        "it": "fila",
+        "ar": "طابور",
+        "ru": "очередь"
+      },
+      "aliases": {
+        "tr": [
+          "sıra"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "public",
+      "note": ""
+    },
+    {
+      "term_id": "eu_passport",
+      "type": "entity",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "AB pasaportu",
+        "en": "EU passport",
+        "it": "passaporto UE",
+        "ar": "جواز سفر الاتحاد الأوروبي",
+        "ru": "паспорт ЕС"
+      },
+      "aliases": {
+        "tr": [
+          "Avrupa Birliği pasaportu"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "EU+UNTERM",
+      "note": ""
+    },
+    {
+      "term_id": "eu_citizen",
+      "type": "entity",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "AB vatandaşı",
+        "en": "EU citizen",
+        "it": "cittadino UE",
+        "ar": "مواطن الاتحاد الأوروبي",
+        "ru": "гражданин ЕС"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "EU+UNTERM",
+      "note": ""
+    },
+    {
+      "term_id": "turkish_passport",
+      "type": "entity",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "Türk pasaportu",
+        "en": "Turkish passport",
+        "it": "passaporto turco",
+        "ar": "جواز سفر تركي",
+        "ru": "турецкий паспорт"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "DHMI",
+      "note": ""
+    },
+    {
+      "term_id": "biometric_passport",
+      "type": "entity",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "biyometrik pasaport",
+        "en": "biometric passport / e-passport",
+        "it": "passaporto biometrico",
+        "ar": "جواز سفر بيومتري",
+        "ru": "биометрический паспорт"
+      },
+      "aliases": {
+        "tr": [
+          "e-pasaport",
+          "elektronik pasaport"
+        ],
+        "en": [
+          "e-passport"
+        ],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+DHMI",
+      "note": ""
+    },
+    {
+      "term_id": "automatic_gate",
+      "type": "entity",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "otomatik kapı",
+        "en": "automatic gate",
+        "it": "gate automatico",
+        "ar": "بوابة آلية",
+        "ru": "автоматический проход"
+      },
+      "aliases": {
+        "tr": [
+          "e-kapı",
+          "biyometrik kapı"
+        ],
+        "en": [
+          "e-gate"
+        ],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+IGA",
+      "note": ""
+    },
+    {
+      "term_id": "stamp",
+      "type": "entity",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "damga",
+        "en": "stamp",
+        "it": "timbro",
+        "ar": "ختم",
+        "ru": "штамп"
+      },
+      "aliases": {
+        "tr": [
+          "mühür"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+public",
+      "note": ""
+    },
+    {
+      "term_id": "entry_stamp",
+      "type": "phrase",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "giriş damgası",
+        "en": "entry stamp",
+        "it": "timbro d'ingresso",
+        "ar": "ختم الدخول",
+        "ru": "штамп въезда"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "exit_stamp",
+      "type": "phrase",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "çıkış damgası",
+        "en": "exit stamp",
+        "it": "timbro d'uscita",
+        "ar": "ختم الخروج",
+        "ru": "штамп выезда"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "border_officer",
+      "type": "entity",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "sınır polisi",
+        "en": "border officer",
+        "it": "agente di frontiera",
+        "ar": "ضابط الحدود",
+        "ru": "пограничник"
+      },
+      "aliases": {
+        "tr": [
+          "pasaport polisi",
+          "göçmenlik memuru"
+        ],
+        "en": [
+          "immigration officer"
+        ],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "UNTERM+ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "purpose_of_visit",
+      "type": "phrase",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "ziyaret amacı",
+        "en": "purpose of visit",
+        "it": "scopo della visita",
+        "ar": "غرض الزيارة",
+        "ru": "цель визита"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "UNTERM+ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "length_of_stay",
+      "type": "phrase",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "kalış süresi",
+        "en": "length of stay",
+        "it": "durata del soggiorno",
+        "ar": "مدة الإقامة",
+        "ru": "продолжительность пребывания"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "UNTERM+ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "foreign_visitor",
+      "type": "entity",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "yabancı ziyaretçi",
+        "en": "foreign visitor",
+        "it": "visitatore straniero",
+        "ar": "زائر أجنبي",
+        "ru": "иностранный посетитель"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "UNTERM",
+      "note": ""
+    },
+    {
+      "term_id": "non_citizen",
+      "type": "entity",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "yabancı uyruklu",
+        "en": "non-citizen",
+        "it": "non cittadino",
+        "ar": "غير المواطن",
+        "ru": "негражданин"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "UNTERM",
+      "note": ""
+    },
+    {
+      "term_id": "residence_permit",
+      "type": "entity",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "oturma izni",
+        "en": "residence permit",
+        "it": "permesso di soggiorno",
+        "ar": "إذن إقامة",
+        "ru": "вид на жительство"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "UNTERM+EU",
+      "note": ""
+    },
+    {
+      "term_id": "entry_exit_system",
+      "type": "entity",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "AB Giriş/Çıkış Sistemi",
+        "en": "EU Entry/Exit System (EES)",
+        "it": "Sistema di Ingressi/Uscite UE (EES)",
+        "ar": "نظام الدخول/الخروج للاتحاد الأوروبي",
+        "ru": "Система въезда/выезда ЕС (EES)"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [
+          "EES"
+        ],
+        "it": []
+      },
+      "confidence": "medium",
+      "source": "EU+ICAO",
+      "note": "2026'da tam operasyonel hale geldi; yeni AB sistemi"
+    },
+    {
+      "term_id": "declaration_form",
+      "type": "entity",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "beyan formu",
+        "en": "declaration form",
+        "it": "modulo di dichiarazione",
+        "ar": "نموذج الإقرار",
+        "ru": "форма декларации"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "UNTERM+ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "currency_declaration",
+      "type": "phrase",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "döviz beyanı",
+        "en": "currency declaration",
+        "it": "dichiarazione di valuta",
+        "ar": "إقرار العملة",
+        "ru": "декларация валюты"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "UNTERM+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "border_control",
+      "type": "phrase",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "sınır kontrolü",
+        "en": "border control",
+        "it": "controllo di frontiera",
+        "ar": "مراقبة الحدود",
+        "ru": "пограничный контроль"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "UNTERM+ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "arrival",
+      "type": "entity",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "varış",
+        "en": "arrival",
+        "it": "arrivo",
+        "ar": "الوصول",
+        "ru": "прибытие"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "departure",
+      "type": "entity",
+      "touchpoints": [
+        "boarding",
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "kalkış",
+        "en": "departure",
+        "it": "partenza",
+        "ar": "المغادرة",
+        "ru": "вылет"
+      },
+      "aliases": {
+        "tr": [
+          "uçuş kalkışı"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "port_of_entry",
+      "type": "phrase",
+      "touchpoints": [
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "giriş kapısı",
+        "en": "port of entry",
+        "it": "porto d'ingresso",
+        "ar": "منفذ الدخول",
+        "ru": "пункт въезда"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "UNTERM+ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "cabin_crew",
+      "type": "entity",
+      "touchpoints": [
+        "boarding"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "kabin görevlisi",
+        "en": "cabin crew",
+        "it": "personale di cabina",
+        "ar": "طاقم المقصورة",
+        "ru": "бортпроводники"
+      },
+      "aliases": {
+        "tr": [
+          "hostes",
+          "kabin ekibi"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "pilot",
+      "type": "entity",
+      "touchpoints": [
+        "boarding"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "pilot",
+        "en": "pilot",
+        "it": "pilota",
+        "ar": "طيار",
+        "ru": "пилот"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+public",
+      "note": ""
+    },
+    {
+      "term_id": "captain",
+      "type": "entity",
+      "touchpoints": [
+        "boarding"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "kaptan",
+        "en": "captain",
+        "it": "comandante",
+        "ar": "قبطان",
+        "ru": "капитан"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+public",
+      "note": ""
+    },
+    {
+      "term_id": "seatbelt",
+      "type": "entity",
+      "touchpoints": [
+        "boarding"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "emniyet kemeri",
+        "en": "seatbelt",
+        "it": "cintura di sicurezza",
+        "ar": "حزام الأمان",
+        "ru": "ремень безопасности"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+public",
+      "note": ""
+    },
+    {
+      "term_id": "tray_table",
+      "type": "entity",
+      "touchpoints": [
+        "boarding"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "tepsi masası",
+        "en": "tray table",
+        "it": "tavolino",
+        "ar": "طاولة الصينية",
+        "ru": "откидной столик"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "public",
+      "note": ""
+    },
+    {
+      "term_id": "overhead_bin",
+      "type": "entity",
+      "touchpoints": [
+        "boarding"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "üst raf",
+        "en": "overhead bin",
+        "it": "cappelliera",
+        "ar": "صندوق علوي",
+        "ru": "верхняя полка"
+      },
+      "aliases": {
+        "tr": [
+          "bagaj rafı"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "public+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "emergency_exit",
+      "type": "phrase",
+      "touchpoints": [
+        "boarding"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "acil çıkış",
+        "en": "emergency exit",
+        "it": "uscita di emergenza",
+        "ar": "مخرج الطوارئ",
+        "ru": "аварийный выход"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "oxygen_mask",
+      "type": "entity",
+      "touchpoints": [
+        "boarding"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "oksijen maskesi",
+        "en": "oxygen mask",
+        "it": "maschera d'ossigeno",
+        "ar": "قناع الأكسجين",
+        "ru": "кислородная маска"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO",
+      "note": ""
+    },
+    {
+      "term_id": "in_flight_meal",
+      "type": "phrase",
+      "touchpoints": [
+        "boarding"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "uçak içi yemek",
+        "en": "in-flight meal",
+        "it": "pasto a bordo",
+        "ar": "وجبة على متن الطائرة",
+        "ru": "питание на борту"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "THY+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "in_flight_entertainment",
+      "type": "phrase",
+      "touchpoints": [
+        "boarding"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "uçak içi eğlence",
+        "en": "in-flight entertainment",
+        "it": "intrattenimento a bordo",
+        "ar": "ترفيه على متن الطائرة",
+        "ru": "развлечения на борту"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [
+          "IFE"
+        ],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA",
+      "note": ""
+    },
+    {
+      "term_id": "flight_duration",
+      "type": "entity",
+      "touchpoints": [
+        "boarding"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "uçuş süresi",
+        "en": "flight duration",
+        "it": "durata del volo",
+        "ar": "مدة الرحلة",
+        "ru": "продолжительность полёта"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA",
+      "note": ""
+    },
+    {
+      "term_id": "takeoff",
+      "type": "entity",
+      "touchpoints": [
+        "boarding"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "kalkış / havalanış",
+        "en": "take-off",
+        "it": "decollo",
+        "ar": "إقلاع",
+        "ru": "взлёт"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "information_desk",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "boarding",
+        "transfer",
+        "security",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "danışma masası",
+        "en": "information desk",
+        "it": "banco informazioni",
+        "ar": "مكتب المعلومات",
+        "ru": "справочная стойка"
+      },
+      "aliases": {
+        "tr": [
+          "danışma"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IGA+public",
+      "note": ""
+    },
+    {
+      "term_id": "lost_and_found",
+      "type": "phrase",
+      "touchpoints": [
+        "check-in",
+        "boarding",
+        "transfer",
+        "security",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "kayıp eşya bürosu",
+        "en": "lost and found",
+        "it": "ufficio oggetti smarriti",
+        "ar": "مكتب المفقودات",
+        "ru": "бюро находок"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "public+IGA",
+      "note": ""
+    },
+    {
+      "term_id": "restroom",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "boarding",
+        "transfer",
+        "security",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "tuvalet",
+        "en": "restroom",
+        "it": "bagno",
+        "ar": "دورة المياه",
+        "ru": "туалет"
+      },
+      "aliases": {
+        "tr": [
+          "WC",
+          "lavabo"
+        ],
+        "en": [
+          "toilet",
+          "washroom"
+        ],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "public",
+      "note": ""
+    },
+    {
+      "term_id": "atm",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "boarding",
+        "transfer",
+        "security",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "bankamatik",
+        "en": "ATM",
+        "it": "bancomat",
+        "ar": "صراف آلي",
+        "ru": "банкомат"
+      },
+      "aliases": {
+        "tr": [
+          "ATM"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "public",
+      "note": ""
+    },
+    {
+      "term_id": "currency_exchange",
+      "type": "phrase",
+      "touchpoints": [
+        "check-in",
+        "boarding",
+        "transfer",
+        "security",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "döviz bürosu",
+        "en": "currency exchange",
+        "it": "cambio valuta",
+        "ar": "صرافة العملات",
+        "ru": "обмен валюты"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IGA+public",
+      "note": ""
+    },
+    {
+      "term_id": "pharmacy",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "boarding",
+        "transfer",
+        "security",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "eczane",
+        "en": "pharmacy",
+        "it": "farmacia",
+        "ar": "صيدلية",
+        "ru": "аптека"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "public",
+      "note": ""
+    },
+    {
+      "term_id": "prayer_room",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "boarding",
+        "transfer",
+        "security",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "mescit",
+        "en": "prayer room",
+        "it": "sala di preghiera",
+        "ar": "غرفة الصلاة",
+        "ru": "молитвенная комната"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IGA+public",
+      "note": ""
+    },
+    {
+      "term_id": "smoking_area",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "boarding",
+        "transfer",
+        "security",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "sigara içme alanı",
+        "en": "smoking area",
+        "it": "area fumatori",
+        "ar": "منطقة التدخين",
+        "ru": "зона для курения"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IGA+public",
+      "note": ""
+    },
+    {
+      "term_id": "wifi",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "boarding",
+        "transfer",
+        "security",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "wifi",
+        "en": "wifi",
+        "it": "wifi",
+        "ar": "واي فاي",
+        "ru": "Wi-Fi"
+      },
+      "aliases": {
+        "tr": [
+          "kablosuz internet"
+        ],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "public",
+      "note": ""
+    },
+    {
+      "term_id": "charging_station",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "boarding",
+        "transfer",
+        "security",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "şarj noktası",
+        "en": "charging station",
+        "it": "punto di ricarica",
+        "ar": "محطة شحن",
+        "ru": "зарядная станция"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IGA+public",
+      "note": ""
+    },
+    {
+      "term_id": "baggage_storage",
+      "type": "entity",
+      "touchpoints": [
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "bagaj saklama",
+        "en": "baggage storage",
+        "it": "deposito bagagli",
+        "ar": "تخزين الأمتعة",
+        "ru": "камера хранения"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IGA+public",
+      "note": ""
+    },
+    {
+      "term_id": "airport_hotel",
+      "type": "entity",
+      "touchpoints": [
+        "transfer"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "havalimanı oteli",
+        "en": "airport hotel",
+        "it": "hotel dell'aeroporto",
+        "ar": "فندق المطار",
+        "ru": "отель аэропорта"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IGA",
+      "note": ""
+    },
+    {
+      "term_id": "car_rental",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "boarding",
+        "transfer",
+        "security",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "araç kiralama",
+        "en": "car rental",
+        "it": "noleggio auto",
+        "ar": "تأجير السيارات",
+        "ru": "аренда автомобилей"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IGA+public",
+      "note": ""
+    },
+    {
+      "term_id": "taxi",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "boarding",
+        "transfer",
+        "security",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "taksi",
+        "en": "taxi",
+        "it": "taxi",
+        "ar": "تاكسي",
+        "ru": "такси"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "public",
+      "note": ""
+    },
+    {
+      "term_id": "special_assistance",
+      "type": "phrase",
+      "touchpoints": [
+        "check-in",
+        "boarding",
+        "transfer",
+        "security",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "özel yardım",
+        "en": "special assistance",
+        "it": "assistenza speciale",
+        "ar": "مساعدة خاصة",
+        "ru": "специальная помощь"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "ICAO+IATA",
+      "note": ""
+    },
+    {
+      "term_id": "floor",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "boarding",
+        "transfer",
+        "security",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "kat",
+        "en": "floor",
+        "it": "piano",
+        "ar": "طابق",
+        "ru": "этаж"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "public",
+      "note": ""
+    },
+    {
+      "term_id": "elevator",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "boarding",
+        "transfer",
+        "security",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "asansör",
+        "en": "elevator",
+        "it": "ascensore",
+        "ar": "مصعد",
+        "ru": "лифт"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "public",
+      "note": ""
+    },
+    {
+      "term_id": "escalator",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "boarding",
+        "transfer",
+        "security",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "yürüyen merdiven",
+        "en": "escalator",
+        "it": "scala mobile",
+        "ar": "سلم متحرك",
+        "ru": "эскалатор"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "public",
+      "note": ""
+    },
+    {
+      "term_id": "exit",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "boarding",
+        "transfer",
+        "security",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "çıkış",
+        "en": "exit",
+        "it": "uscita",
+        "ar": "خروج",
+        "ru": "выход"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "public",
+      "note": "Bağlama dikkat: pasaport tab'ında 'ülke çıkışı', boarding'de 'kapı'"
+    },
+    {
+      "term_id": "entrance",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "boarding",
+        "transfer",
+        "security",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "giriş",
+        "en": "entrance",
+        "it": "ingresso",
+        "ar": "مدخل",
+        "ru": "вход"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "public",
+      "note": ""
+    },
+    {
+      "term_id": "domestic",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "boarding",
+        "transfer",
+        "security",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "iç hatlar",
+        "en": "domestic",
+        "it": "voli nazionali",
+        "ar": "رحلات داخلية",
+        "ru": "внутренние рейсы"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+IGA",
+      "note": ""
+    },
+    {
+      "term_id": "international",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "boarding",
+        "transfer",
+        "security",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "dış hatlar",
+        "en": "international",
+        "it": "voli internazionali",
+        "ar": "رحلات دولية",
+        "ru": "международные рейсы"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+IGA",
+      "note": ""
+    },
+    {
+      "term_id": "departures",
+      "type": "entity",
+      "touchpoints": [
+        "check-in",
+        "boarding",
+        "transfer",
+        "security",
+        "passport"
+      ],
+      "force": false,
+      "lang": {
+        "tr": "gidişler",
+        "en": "departures",
+        "it": "partenze",
+        "ar": "المغادرة",
+        "ru": "вылет"
+      },
+      "aliases": {
+        "tr": [],
+        "en": [],
+        "it": []
+      },
+      "confidence": "high",
+      "source": "IATA+IGA",
+      "note": "FIDS başlığı; 'kalkış' ile aynı kavram"
+    }
+  ]
+}
