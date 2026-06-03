@@ -1,7 +1,7 @@
 import type { Context, Scenario, TranslateRequest, TranslateResponse } from "./types";
 
 // Edit this to point at your Global Gate backend.
-export const API_BASE = "http://localhost:8000";
+export const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
 
 type Listener = (active: boolean) => void;
 let mockActive = false;
