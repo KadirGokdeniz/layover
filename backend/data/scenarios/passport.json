@@ -10,7 +10,9 @@
   "data_used": [],
   "languages_demoed": [
     "it",
-    "en"
+    "en",
+    "ar",
+    "ru"
   ],
   "demo_note": "Hızlı kalıp. Sistem bu tab'ta resmî karar VERMEZ — yalnızca yönlendirme yapar. Sınır polisi karar verir; sistem o role girmez. Replikler bilinçle bu sınıra göre yazılmıştır.",
   "variants": {
@@ -97,6 +99,93 @@
           "lang": "tr",
           "text": "Teşekkürler, otomatik kapıyı kullanacağım.",
           "direction": "en->tr"
+        }
+      ]
+    },
+    "ar": {
+      "rtl": true,
+      "turns": [
+        {
+          "n": 1,
+          "speaker": "passenger",
+          "lang": "ar",
+          "text": "عفواً، إلى أي طابور يجب أن أتجه؟"
+        },
+        {
+          "n": 2,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Pardon, hangi kuyruğa girmeliyim?",
+          "direction": "ar->tr"
+        },
+        {
+          "n": 3,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Pasaportunuzu görebilir miyim? Diğer ülkeler kuyruğuna girmeniz gerekiyor, solda. E-pasaportunuz varsa otomatik kapıları da kullanabilirsiniz."
+        },
+        {
+          "n": 4,
+          "speaker": "system",
+          "lang": "ar",
+          "text": "هل يمكنني رؤية جواز سفرك؟ يرجى التوجه إلى طابور الجنسيات الأخرى على اليسار. إذا كان لديك جواز سفر إلكتروني، يمكنك أيضاً استخدام البوابات الآلية.",
+          "direction": "tr->ar"
+        },
+        {
+          "n": 5,
+          "speaker": "passenger",
+          "lang": "ar",
+          "text": "شكراً، سأستخدم البوابة الآلية."
+        },
+        {
+          "n": 6,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Teşekkürler, otomatik kapıyı kullanacağım.",
+          "direction": "ar->tr"
+        }
+      ]
+    },
+    "ru": {
+      "turns": [
+        {
+          "n": 1,
+          "speaker": "passenger",
+          "lang": "ru",
+          "text": "Извините, в какую очередь мне встать?"
+        },
+        {
+          "n": 2,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Pardon, hangi kuyruğa girmeliyim?",
+          "direction": "ru->tr"
+        },
+        {
+          "n": 3,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Pasaportunuzu görebilir miyim? Diğer ülkeler kuyruğuna girmeniz gerekiyor, solda. E-pasaportunuz varsa otomatik kapıları da kullanabilirsiniz."
+        },
+        {
+          "n": 4,
+          "speaker": "system",
+          "lang": "ru",
+          "text": "Могу я увидеть ваш паспорт? Вам нужно встать в очередь для граждан других стран, слева. Если у вас биометрический паспорт, вы также можете воспользоваться автоматическими воротами.",
+          "direction": "tr->ru"
+        },
+        {
+          "n": 5,
+          "speaker": "passenger",
+          "lang": "ru",
+          "text": "Спасибо, воспользуюсь автоматическими воротами."
+        },
+        {
+          "n": 6,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Teşekkürler, otomatik kapıyı kullanacağım.",
+          "direction": "ru->tr"
         }
       ]
     }

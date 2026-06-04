@@ -10,7 +10,9 @@
   "data_used": [],
   "languages_demoed": [
     "it",
-    "en"
+    "en",
+    "ar",
+    "ru"
   ],
   "demo_note": "Hızlı kalıp. Güvenlikte konuşma kısa ve emir kipinde, sistem zaten basit talimatları kolayca çevirir. Mock veriden bağımsız.",
   "variants": {
@@ -97,6 +99,93 @@
           "lang": "en",
           "text": "Yes, please remove your belt as well. You can keep your shoes on.",
           "direction": "tr->en"
+        }
+      ]
+    },
+    "ar": {
+      "rtl": true,
+      "turns": [
+        {
+          "n": 1,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Lütfen ceplerinizi boşaltın, dizüstü bilgisayarınızı ve sıvılarınızı ayrı tepsiye koyun."
+        },
+        {
+          "n": 2,
+          "speaker": "system",
+          "lang": "ar",
+          "text": "من فضلك، أفرغ جيوبك وضع الحاسوب المحمول والسوائل في صينية منفصلة.",
+          "direction": "tr->ar"
+        },
+        {
+          "n": 3,
+          "speaker": "passenger",
+          "lang": "ar",
+          "text": "والحزام أيضاً؟"
+        },
+        {
+          "n": 4,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Kemer de mi?",
+          "direction": "ar->tr"
+        },
+        {
+          "n": 5,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Evet, kemerinizi de çıkarın lütfen. Ayakkabılarınız kalabilir."
+        },
+        {
+          "n": 6,
+          "speaker": "system",
+          "lang": "ar",
+          "text": "نعم، من فضلك اخلع حزامك أيضاً. يمكنك إبقاء حذائك.",
+          "direction": "tr->ar"
+        }
+      ]
+    },
+    "ru": {
+      "turns": [
+        {
+          "n": 1,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Lütfen ceplerinizi boşaltın, dizüstü bilgisayarınızı ve sıvılarınızı ayrı tepsiye koyun."
+        },
+        {
+          "n": 2,
+          "speaker": "system",
+          "lang": "ru",
+          "text": "Пожалуйста, освободите карманы, поместите ноутбук и жидкости в отдельный лоток.",
+          "direction": "tr->ru"
+        },
+        {
+          "n": 3,
+          "speaker": "passenger",
+          "lang": "ru",
+          "text": "Ремень тоже?"
+        },
+        {
+          "n": 4,
+          "speaker": "system",
+          "lang": "tr",
+          "text": "Kemer de mi?",
+          "direction": "ru->tr"
+        },
+        {
+          "n": 5,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Evet, kemerinizi de çıkarın lütfen. Ayakkabılarınız kalabilir."
+        },
+        {
+          "n": 6,
+          "speaker": "system",
+          "lang": "ru",
+          "text": "Да, пожалуйста, снимите также ремень. Обувь можете оставить.",
+          "direction": "tr->ru"
         }
       ]
     }
