@@ -14,7 +14,7 @@
     "ar",
     "ru"
   ],
-  "demo_note": "Hızlı kalıp. Güvenlikte konuşma kısa ve emir kipinde, sistem zaten basit talimatları kolayca çevirir. Mock veriden bağımsız.",
+  "demo_note": "Hızlı kalıp. Güvenlikte konuşma kısa ve emir kipinde, sistem zaten basit talimatları kolayca çevirir. Mock veriden bağımsız. Telefon/saat/metal eşya örnekleri kültürel olarak nötr.",
   "variants": {
     "it": {
       "turns": [
@@ -35,26 +35,26 @@
           "n": 3,
           "speaker": "passenger",
           "lang": "it",
-          "text": "Anche la cintura?"
+          "text": "Anche il telefono?"
         },
         {
           "n": 4,
           "speaker": "system",
           "lang": "tr",
-          "text": "Kemer de mi?",
+          "text": "Telefon da mı?",
           "direction": "it->tr"
         },
         {
           "n": 5,
           "speaker": "staff",
           "lang": "tr",
-          "text": "Evet, kemerinizi de çıkarın lütfen. Ayakkabılarınız kalabilir."
+          "text": "Evet, telefonunuzu, saatinizi ve metal eşyalarınızı da tepsiye koyun."
         },
         {
           "n": 6,
           "speaker": "system",
           "lang": "it",
-          "text": "Sì, tolga anche la cintura per favore. Le scarpe può tenerle.",
+          "text": "Sì, metta anche il telefono, l'orologio e gli oggetti metallici nel vassoio.",
           "direction": "tr->it"
         }
       ]
@@ -78,26 +78,26 @@
           "n": 3,
           "speaker": "passenger",
           "lang": "en",
-          "text": "Belt too?"
+          "text": "Phone too?"
         },
         {
           "n": 4,
           "speaker": "system",
           "lang": "tr",
-          "text": "Kemer de mi?",
+          "text": "Telefon da mı?",
           "direction": "en->tr"
         },
         {
           "n": 5,
           "speaker": "staff",
           "lang": "tr",
-          "text": "Evet, kemerinizi de çıkarın lütfen. Ayakkabılarınız kalabilir."
+          "text": "Evet, telefonunuzu, saatinizi ve metal eşyalarınızı da tepsiye koyun."
         },
         {
           "n": 6,
           "speaker": "system",
           "lang": "en",
-          "text": "Yes, please remove your belt as well. You can keep your shoes on.",
+          "text": "Yes, place your phone, watch, and metal items in the tray as well.",
           "direction": "tr->en"
         }
       ]
@@ -122,26 +122,26 @@
           "n": 3,
           "speaker": "passenger",
           "lang": "ar",
-          "text": "والحزام أيضاً؟"
+          "text": "والهاتف أيضاً؟"
         },
         {
           "n": 4,
           "speaker": "system",
           "lang": "tr",
-          "text": "Kemer de mi?",
+          "text": "Telefon da mı?",
           "direction": "ar->tr"
         },
         {
           "n": 5,
           "speaker": "staff",
           "lang": "tr",
-          "text": "Evet, kemerinizi de çıkarın lütfen. Ayakkabılarınız kalabilir."
+          "text": "Evet, telefonunuzu, saatinizi ve metal eşyalarınızı da tepsiye koyun."
         },
         {
           "n": 6,
           "speaker": "system",
           "lang": "ar",
-          "text": "نعم، من فضلك اخلع حزامك أيضاً. يمكنك إبقاء حذائك.",
+          "text": "نعم، ضع هاتفك وساعتك والأشياء المعدنية في الصينية أيضاً.",
           "direction": "tr->ar"
         }
       ]
@@ -165,26 +165,26 @@
           "n": 3,
           "speaker": "passenger",
           "lang": "ru",
-          "text": "Ремень тоже?"
+          "text": "Телефон тоже?"
         },
         {
           "n": 4,
           "speaker": "system",
           "lang": "tr",
-          "text": "Kemer de mi?",
+          "text": "Telefon da mı?",
           "direction": "ru->tr"
         },
         {
           "n": 5,
           "speaker": "staff",
           "lang": "tr",
-          "text": "Evet, kemerinizi de çıkarın lütfen. Ayakkabılarınız kalabilir."
+          "text": "Evet, telefonunuzu, saatinizi ve metal eşyalarınızı da tepsiye koyun."
         },
         {
           "n": 6,
           "speaker": "system",
           "lang": "ru",
-          "text": "Да, пожалуйста, снимите также ремень. Обувь можете оставить.",
+          "text": "Да, положите также телефон, часы и металлические предметы в лоток.",
           "direction": "tr->ru"
         }
       ]

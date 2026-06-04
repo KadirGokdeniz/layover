@@ -14,7 +14,7 @@
     "ar",
     "ru"
   ],
-  "demo_note": "Hızlı kalıp. Sistem bu tab'ta resmî karar VERMEZ — yalnızca yönlendirme yapar. Sınır polisi karar verir; sistem o role girmez. Replikler bilinçle bu sınıra göre yazılmıştır.",
+  "demo_note": "Hızlı kalıp. Sistem bu tab'ta resmî karar VERMEZ — yalnızca yönlendirme yapar. Sınır polisi karar verir; sistem o role girmez. Replikler bilinçle bu sınıra göre yazılmıştır. 8 turn ile doğal kapanış: yer hizmetlisi iyi yolculuklar diler.",
   "variants": {
     "it": {
       "turns": [
@@ -56,6 +56,19 @@
           "lang": "tr",
           "text": "Teşekkürler, otomatik kapıyı kullanacağım.",
           "direction": "it->tr"
+        },
+        {
+          "n": 7,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Tabii. İyi yolculuklar."
+        },
+        {
+          "n": 8,
+          "speaker": "system",
+          "lang": "it",
+          "text": "Certo. Buon viaggio.",
+          "direction": "tr->it"
         }
       ]
     },
@@ -99,6 +112,19 @@
           "lang": "tr",
           "text": "Teşekkürler, otomatik kapıyı kullanacağım.",
           "direction": "en->tr"
+        },
+        {
+          "n": 7,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Tabii. İyi yolculuklar."
+        },
+        {
+          "n": 8,
+          "speaker": "system",
+          "lang": "en",
+          "text": "Of course. Have a good trip.",
+          "direction": "tr->en"
         }
       ]
     },
@@ -143,6 +169,19 @@
           "lang": "tr",
           "text": "Teşekkürler, otomatik kapıyı kullanacağım.",
           "direction": "ar->tr"
+        },
+        {
+          "n": 7,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Tabii. İyi yolculuklar."
+        },
+        {
+          "n": 8,
+          "speaker": "system",
+          "lang": "ar",
+          "text": "بالطبع. رحلة سعيدة.",
+          "direction": "tr->ar"
         }
       ]
     },
@@ -186,6 +225,19 @@
           "lang": "tr",
           "text": "Teşekkürler, otomatik kapıyı kullanacağım.",
           "direction": "ru->tr"
+        },
+        {
+          "n": 7,
+          "speaker": "staff",
+          "lang": "tr",
+          "text": "Tabii. İyi yolculuklar."
+        },
+        {
+          "n": 8,
+          "speaker": "system",
+          "lang": "ru",
+          "text": "Конечно. Счастливого пути.",
+          "direction": "tr->ru"
         }
       ]
     }
