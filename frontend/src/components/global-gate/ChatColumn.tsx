@@ -108,7 +108,8 @@ export const ChatColumn = forwardRef<ChatColumnHandle, Props>(function ChatColum
   const bubbleSide = side === "left" ? "left" : "right";
 
   return (
-    <div className="flex h-full flex-col bg-background">
+    // min-h-0 is critical: lets flex child shrink so inner flex-1 can scroll.
+    <div className="flex h-full min-h-0 flex-col bg-background">
       <div className="flex items-center justify-between border-b border-border bg-card px-5 py-3">
         <div className="flex flex-col leading-tight" dir={rtl ? "rtl" : "ltr"}>
           <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
@@ -124,7 +125,11 @@ export const ChatColumn = forwardRef<ChatColumnHandle, Props>(function ChatColum
         />
       </div>
 
-      <div ref={scrollRef} className="flex-1 overflow-y-auto px-5 py-5">
+      {/* min-h-0 here too: standard fix for `overflow-y-auto` inside `flex-1` parent. */}
+      <div
+        ref={scrollRef}
+        className="flex-1 min-h-0 overflow-y-auto px-5 py-5"
+      >
         {visibleMessages.length === 0 ? (
           <div className="flex h-full items-center justify-center text-sm text-muted-foreground">
             {column === "staff"
@@ -148,14 +153,19 @@ export const ChatColumn = forwardRef<ChatColumnHandle, Props>(function ChatColum
               const showTranslation = m.translationVisible !== false;
 
               return (
-                <div
-                  key={m.id}
-                  className={cn(
-                    "flex flex-col gap-2",
-                    idx > 0 && "mt-6 pt-6 border-t border-dashed border-border/40",
+                <div key={m.id} className="flex flex-col gap-2">
+                  {/* === DIVIDER between turn groups (skipped before first) === */}
+                  {idx > 0 && (
+                    <div className="my-5 flex items-center gap-3 text-muted-foreground/50">
+                      <div className="h-px flex-1 border-t border-dashed border-muted-foreground/40" />
+                      <span className="text-[9px] font-semibold uppercase tracking-[0.2em]">
+                        ·
+                      </span>
+                      <div className="h-px flex-1 border-t border-dashed border-muted-foreground/40" />
+                    </div>
                   )}
-                >
-                  {/* === ORIGINAL bubble (prominent, in speaker's own language) === */}
+
+                  {/* === ORIGINAL bubble (prominent, speaker's own language) === */}
                   <MessageBubble
                     bubbleId={m.id + "-orig"}
                     text={originalText}
@@ -164,7 +174,7 @@ export const ChatColumn = forwardRef<ChatColumnHandle, Props>(function ChatColum
                     rtl={originalRtl}
                   />
 
-                  {/* === TRANSLATION bubble (subdued, with clear "Çeviri" label) === */}
+                  {/* === TRANSLATION bubble (subdued, with explicit ÇEVİRİ label) === */}
                   {showTranslation && (
                     <div className="flex flex-col gap-1">
                       <div
