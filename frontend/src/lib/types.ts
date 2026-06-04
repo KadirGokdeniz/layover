@@ -33,6 +33,13 @@ export interface Message {
   forceReport: ForceReportItem[];
   corrected: boolean;
   context: Context;
+  /**
+   * When false, only the origin (sender's) bubble is shown; the translation
+   * bubble on the opposite column stays hidden until revealed.
+   * Used by scenario playback for "interpreter" temporal flow.
+   * Undefined or true → both bubbles visible (default / manual mode).
+   */
+  translationVisible?: boolean;
 }
 
 // ===== Scenarios =====

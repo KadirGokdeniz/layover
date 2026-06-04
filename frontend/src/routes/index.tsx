@@ -151,6 +151,7 @@ function GlobalGate() {
       text: string,
       langOverride?: PassengerLang,
       contextOverride?: Context,
+      deferTranslation = false,
     ) => {
       const lang = langOverride ?? passengerLang;
       const ctx = contextOverride ?? context;
@@ -174,6 +175,7 @@ function GlobalGate() {
               forceReport: res.force_report,
               corrected: res.raw_llm_output !== res.translation,
               context: ctx,
+              translationVisible: !deferTranslation,
             },
           ]);
         } else {
@@ -194,6 +196,7 @@ function GlobalGate() {
               forceReport: res.force_report,
               corrected: res.raw_llm_output !== res.translation,
               context: ctx,
+              translationVisible: !deferTranslation,
             },
           ]);
         }
@@ -294,8 +297,9 @@ function GlobalGate() {
       await typewriter(colRef, turn.text);
       if (playbackRef.current.stopped) break;
 
-      // 2) Submit through real backend → bubble + translation arrive
-      await send(turn.speaker, turn.text, activeLang, ctx);
+      // 2) Submit through real backend → message created with translationVisible=false
+      //    → only ORIGIN column shows a bubble (translation hidden)
+      await send(turn.speaker, turn.text, activeLang, ctx, true);
       colRef.current?.setDraft("");
       if (playbackRef.current.stopped) break;
 
@@ -305,7 +309,7 @@ function GlobalGate() {
       }
       if (playbackRef.current.stopped) break;
 
-      // 3) Read the latest message and speak ORIGINAL → then TRANSLATION
+      // 3) Read the latest message and speak ORIGINAL → REVEAL translation → speak TRANSLATION
       await sleep(150); // let setMessages settle
       const msgs = messagesRef.current;
       const lastMsg = msgs[msgs.length - 1];
@@ -337,7 +341,7 @@ function GlobalGate() {
         transLang = LANG_LOCALE[lastMsg.langForeign];
       }
 
-      // Speak ORIGINAL
+      // 3a) Speak ORIGINAL (only origin bubble is visible at this point)
       await speakAndWait(origBubbleId, origText, origLang);
       if (playbackRef.current.stopped) break;
 
@@ -347,10 +351,17 @@ function GlobalGate() {
       }
       if (playbackRef.current.stopped) break;
 
-      // Small pause between original and interpreter
+      // 3b) REVEAL translation bubble (now appears on the destination column)
+      setMessages((prev) =>
+        prev.map((m) =>
+          m.id === lastMsg.id ? { ...m, translationVisible: true } : m,
+        ),
+      );
+
+      // 3c) Small pause between original and interpreter
       await sleep(ORIGINAL_TO_TRANSLATION_PAUSE_MS);
 
-      // Speak TRANSLATION
+      // 3d) Speak TRANSLATION
       await speakAndWait(transBubbleId, transText, transLang);
       if (playbackRef.current.stopped) break;
 
@@ -380,6 +391,8 @@ function GlobalGate() {
     cancelSpeech();
     staffColumnRef.current?.setDraft("");
     passengerColumnRef.current?.setDraft("");
+    // Reveal any hidden translation bubbles so the user isn't left with half-shown turns
+    setMessages((prev) => prev.map((m) => ({ ...m, translationVisible: true })));
     setPlaybackState("idle");
     setCurrentTurnIndex(0);
   }, []);

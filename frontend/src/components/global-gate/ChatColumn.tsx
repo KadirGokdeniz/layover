@@ -101,6 +101,14 @@ export const ChatColumn = forwardRef<ChatColumnHandle, Props>(function ChatColum
   const inputsDisabled = pending || inputsLocked;
   const micDisabled = pending || processing || inputsLocked;
 
+  // Filter: when this column is the TRANSLATION (destination) side of a message,
+  // only render the bubble if the message's translation has been revealed.
+  // For the ORIGIN side (m.sender === column), always render.
+  const visibleMessages = messages.filter((m) => {
+    if (m.sender === column) return true; // origin column: always visible
+    return m.translationVisible !== false; // destination column: hide if explicitly false
+  });
+
   return (
     <div className="flex h-full flex-col bg-background">
       <div className="flex items-center justify-between border-b border-border bg-card px-5 py-3">
@@ -119,7 +127,7 @@ export const ChatColumn = forwardRef<ChatColumnHandle, Props>(function ChatColum
       </div>
 
       <div ref={scrollRef} className="flex-1 overflow-y-auto px-5 py-5">
-        {messages.length === 0 ? (
+        {visibleMessages.length === 0 ? (
           <div className="flex h-full items-center justify-center text-sm text-muted-foreground">
             {column === "staff"
               ? "Konuşma henüz başlamadı"
@@ -129,7 +137,7 @@ export const ChatColumn = forwardRef<ChatColumnHandle, Props>(function ChatColum
           </div>
         ) : (
           <div className="flex flex-col gap-4">
-            {messages.map((m) => {
+            {visibleMessages.map((m) => {
               const isMineColumn = m.sender === column;
               const text = column === "staff" ? m.tr : m.foreign;
               const isTranslated = m.sender !== column;
