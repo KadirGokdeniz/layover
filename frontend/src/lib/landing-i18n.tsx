@@ -160,8 +160,8 @@ export const t = {
     tr: "Force-locked operasyonel veri",
   },
   solution01Desc: {
-    en: "Flight codes, gate numbers, seat assignments, and boarding times are post-processed against the source. If the AI changes them during translation, the system corrects it. Always exact, always preserved.",
-    tr: "Uçuş kodları, kapı numaraları, koltuk bilgileri ve biniş saatleri kaynak metinle karşılaştırılır. Yapay zeka tercümede değiştirirse sistem düzeltir. Her zaman birebir, her zaman korunur.",
+    en: "Layover doesn't just translate — it verifies. Every output is checked against the source, and any drift in operational data is corrected automatically.",
+    tr: "Layover sadece çevirmez, doğrular. Her çıktı kaynakla karşılaştırılır, operasyonel veride sapma varsa otomatik düzeltilir.",
   },
   // Solution 02: Context-aware (was 03)
   solution02Title: {
@@ -169,8 +169,8 @@ export const t = {
     tr: "Bağlam-duyarlı çeviri",
   },
   solution02Desc: {
-    en: "Each scenario has its own prompt engineering — boarding uses different vocabulary than transfer, security has different sensitivity than passport. Context-specific design significantly improves accuracy.",
-    tr: "Her senaryo kendi prompt mühendisliğine sahip — boarding'in kelime hazinesi transfer'den farklı, security'nin hassasiyeti passport'tan farklı. Bağlama özgü tasarım doğruluğu belirgin artırır.",
+    en: "Each scenario carries its own context. Layover knows where the conversation is happening — and adapts the translation accordingly.",
+    tr: "Her senaryonun kendi bağlamı vardır. Layover konuşmanın nerede geçtiğini bilir — ve çeviriyi ona göre uyarlar.",
   },
   // Solution 03: Voice + multilingual (was 01)
   solution03Title: {
