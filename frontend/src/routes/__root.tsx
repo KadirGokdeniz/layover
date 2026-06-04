@@ -77,20 +77,42 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Layover · IST Ground Operations Console" },
+      {
+        name: "description",
+        content:
+          "Real-time multilingual translation for airline ground operations. 4 languages, voice-enabled, force-locked flight data.",
+      },
+      { name: "author", content: "Layover" },
+      { name: "theme-color", content: "#0F4C5C" },
+
+      // Open Graph (WhatsApp, LinkedIn, Facebook previews)
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { property: "og:site_name", content: "Layover" },
+      { property: "og:title", content: "Layover · Operational interpreter" },
+      {
+        property: "og:description",
+        content:
+          "Real-time multilingual translation for airline ground operations.",
+      },
+      { property: "og:image", content: "/og-image.svg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:url", content: "https://layover-zeta.vercel.app" },
+
+      // Twitter Card
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Layover · Operational interpreter" },
+      {
+        name: "twitter:description",
+        content:
+          "Real-time multilingual translation for airline ground operations.",
+      },
+      { name: "twitter:image", content: "/og-image.svg" },
     ],
     links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
+      { rel: "stylesheet", href: appCss },
+      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
     ],
   }),
   shellComponent: RootShell,

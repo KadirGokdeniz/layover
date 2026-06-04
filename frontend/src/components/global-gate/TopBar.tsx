@@ -1,4 +1,4 @@
-import { Plane, Volume2 } from "lucide-react";
+import { Volume2 } from "lucide-react";
 import type { PassengerLang } from "@/lib/types";
 import {
   Select,
@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
 import { ThemeToggle } from "./ThemeToggle";
+import { Logo } from "./Logo";
 
 export const PASSENGER_LANGS: { code: PassengerLang; label: string }[] = [
   { code: "en", label: "English" },
@@ -38,16 +39,19 @@ export function TopBar({
     <header className="border-b border-border bg-card">
       <div className="flex h-16 items-center justify-between px-6">
         <div className="flex items-center gap-3">
-          <div className="flex h-9 w-9 items-center justify-center rounded-md bg-primary text-primary-foreground">
-            <Plane className="h-5 w-5" strokeWidth={2.25} />
-          </div>
-          <div className="flex flex-col leading-tight">
-            <span className="text-lg font-semibold tracking-tight">Layover</span>
-            <span className="text-[11px] uppercase tracking-[0.16em] text-muted-foreground">
-              IST · Ground Operations Console
-            </span>
-          </div>
+        <Logo 
+          variant="mark" 
+          className="h-9 text-[#0F4C5C] dark:text-[#5BC4D6]" 
+        />
+        <div className="flex flex-col leading-tight">
+          <span className="text-lg font-semibold tracking-tight text-foreground">
+            Layover
+          </span>
+          <span className="text-[10px] text-muted-foreground tracking-[0.2em]">
+            IST · GROUND OPERATIONS CONSOLE
+          </span>
         </div>
+      </div>
         <div className="flex items-center gap-4">
           <span className="text-xs uppercase tracking-wider text-muted-foreground">
             Yolcu dili

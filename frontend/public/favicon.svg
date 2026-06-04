@@ -1,0 +1,11 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Layover">
+<title>Layover</title>
+<style>
+.brand { stroke: #0F4C5C; fill: #0F4C5C; }
+@media (prefers-color-scheme: dark) {
+.brand { stroke: #5BC4D6; fill: #5BC4D6; }
+}
+</style>
+<path d="M 15 75 C 15 0 85 0 85 75" class="brand" stroke-width="12" stroke-linecap="round" fill="none"/>
+<circle cx="50" cy="19" r="10" class="brand"/>
+</svg>
