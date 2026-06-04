@@ -6,7 +6,7 @@ import {
   useState,
   type KeyboardEvent,
 } from "react";
-import { Send, Loader2, Mic, Languages } from "lucide-react";
+import { Send, Loader2, Mic, Languages, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
@@ -40,6 +40,29 @@ interface Props {
   /** when true, disables manual input (used during scenario playback) */
   inputsLocked?: boolean;
 }
+
+const EMPTY_STATE: Record<string, { title: string; hint: string }> = {
+  tr: {
+    title: "Konuşma henüz başlamadı",
+    hint: "Yukarıdaki Senaryoyu Oynat'a basın veya bir mesaj yazın",
+  },
+  en: {
+    title: "Conversation hasn't started",
+    hint: "Press Play scenario above or type a message",
+  },
+  it: {
+    title: "Conversazione non iniziata",
+    hint: "Premi Avvia scenario sopra o scrivi un messaggio",
+  },
+  ar: {
+    title: "لم تبدأ المحادثة بعد",
+    hint: "اضغط تشغيل السيناريو أعلاه أو اكتب رسالة",
+  },
+  ru: {
+    title: "Разговор еще не начался",
+    hint: "Нажмите Запустить сценарий выше или напишите сообщение",
+  },
+};
 
 export const ChatColumn = forwardRef<ChatColumnHandle, Props>(function ChatColumn(
   {
@@ -107,6 +130,8 @@ export const ChatColumn = forwardRef<ChatColumnHandle, Props>(function ChatColum
 
   const bubbleSide = side === "left" ? "left" : "right";
 
+  const emptyCopy = EMPTY_STATE[sttLang] ?? EMPTY_STATE.en;
+
   return (
     // min-h-0 is critical: lets flex child shrink so inner flex-1 can scroll.
     <div className="flex h-full min-h-0 flex-col bg-background">
@@ -131,12 +156,21 @@ export const ChatColumn = forwardRef<ChatColumnHandle, Props>(function ChatColum
         className="flex-1 min-h-0 overflow-y-auto px-5 py-5"
       >
         {visibleMessages.length === 0 ? (
-          <div className="flex h-full items-center justify-center text-sm text-muted-foreground">
-            {column === "staff"
-              ? "Konuşma henüz başlamadı"
-              : rtl
-                ? "لم تبدأ المحادثة بعد"
-                : "Conversation not started"}
+          <div
+            className="flex h-full flex-col items-center justify-center gap-4 px-6 text-center"
+            dir={rtl ? "rtl" : "ltr"}
+          >
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+              <Play className="h-5 w-5 text-primary" fill="currentColor" />
+            </div>
+            <div className="space-y-1.5">
+              <div className="text-sm font-medium text-foreground">
+                {emptyCopy.title}
+              </div>
+              <div className="max-w-[280px] text-xs leading-relaxed text-muted-foreground">
+                {emptyCopy.hint}
+              </div>
+            </div>
           </div>
         ) : (
           <div className="flex flex-col">
