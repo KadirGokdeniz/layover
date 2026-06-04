@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/landing/Hero";
 import { ProblemSection } from "@/components/landing/ProblemSection";
 import { SolutionSection } from "@/components/landing/SolutionSection";
+import { FinalCTA } from "@/components/landing/FinalCTA";
+import { Footer } from "@/components/landing/Footer";
 import { LandingLangProvider } from "@/lib/landing-i18n";
 
 export const Route = createFileRoute("/")({
@@ -11,7 +13,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Real-time multilingual translation for airline ground operations. 4 languages, voice-enabled, force-locked flight data.",
+          "Real-time multilingual translation for airline ground operations. Force-locked operational data, context-aware, voice-enabled.",
       },
       { property: "og:type", content: "website" },
       { property: "og:title", content: "Layover · Operational Interpreter" },
@@ -33,6 +35,8 @@ function Landing() {
         <Hero />
         <ProblemSection />
         <SolutionSection />
+        <FinalCTA />
+        <Footer />
       </div>
     </LandingLangProvider>
   );

@@ -185,4 +185,28 @@ export const t = {
     en: "Purpose-trained",
     tr: "Özel eğitildi",
   },
+
+  // ============== Final CTA ==============
+  finalCtaKicker: {
+    en: "Try it now",
+    tr: "Hemen dene",
+  },
+  finalCtaHeadingLine1: {
+    en: "See Layover",
+    tr: "Layover'ı",
+  },
+  finalCtaHeadingLine2: {
+    en: "at work.",
+    tr: "çalışırken gör.",
+  },
+  finalCtaSubtitle: {
+    en: "No account, no setup. The demo opens in your browser — try every scenario, every language.",
+    tr: "Hesap yok, kurulum yok. Demo tarayıcıda açılır — her senaryoyu, her dili deneyebilirsin.",
+  },
+
+  // ============== Footer ==============
+  footerCopy: {
+    en: "© 2026 Layover · Built for THY Terminal Accelerator",
+    tr: "© 2026 Layover · THY Terminal Accelerator için yapıldı",
+  },
 };
