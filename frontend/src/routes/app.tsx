@@ -9,6 +9,7 @@ import { ScenarioPlayer, type PlaybackState } from "@/components/global-gate/Sce
 import { fetchScenario, translate } from "@/lib/api";
 import { cancelSpeech, LANG_LOCALE, speak, useSpeakingId } from "@/lib/voice";
 import type { Context, Message, PassengerLang, ScenarioTurn } from "@/lib/types";
+import { WelcomeModal } from "@/components/global-gate/WelcomeModal";
 
 export const Route = createFileRoute("/app")({
   head: () => ({
@@ -460,6 +461,7 @@ function GlobalGate() {
       </main>
 
       <MockIndicator />
+      <WelcomeModal />
     </div>
   );
 }

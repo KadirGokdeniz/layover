@@ -1,12 +1,8 @@
-import { useEffect, useState } from "react";
 import { Play, Pause, Square, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 export type PlaybackState = "idle" | "loading" | "playing" | "paused";
-
-const VISITED_KEY = "gg.visitedConsole";
-const PULSE_TIMEOUT_MS = 10_000;
 
 interface Props {
   state: PlaybackState;
@@ -31,27 +27,6 @@ export function ScenarioPlayer({
   onStop,
   disabled,
 }: Props) {
-  // First-visit pulse on Play button
-  const [showPulse, setShowPulse] = useState(false);
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const visited = localStorage.getItem(VISITED_KEY);
-    if (visited) return;
-
-    setShowPulse(true);
-    const t = setTimeout(() => setShowPulse(false), PULSE_TIMEOUT_MS);
-    return () => clearTimeout(t);
-  }, []);
-
-  const handlePlay = () => {
-    if (typeof window !== "undefined") {
-      localStorage.setItem(VISITED_KEY, "1");
-    }
-    setShowPulse(false);
-    onPlay();
-  };
-
   return (
     <div className="flex items-center gap-3 border-b border-border bg-card px-5 py-2">
       <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
@@ -59,23 +34,10 @@ export function ScenarioPlayer({
       </span>
 
       {state === "idle" && (
-        <div className="relative inline-flex">
-          {showPulse && (
-            <span
-              aria-hidden
-              className="pointer-events-none absolute inset-0 rounded-md bg-primary/40 animate-ping"
-            />
-          )}
-          <Button
-            size="sm"
-            onClick={handlePlay}
-            disabled={disabled}
-            className="relative h-8"
-          >
-            <Play className="h-3.5 w-3.5" />
-            <span className="ml-1.5 text-xs font-medium">Senaryoyu Oynat</span>
-          </Button>
-        </div>
+        <Button size="sm" onClick={onPlay} disabled={disabled} className="h-8">
+          <Play className="h-3.5 w-3.5" />
+          <span className="ml-1.5 text-xs font-medium">Senaryoyu Oynat</span>
+        </Button>
       )}
 
       {state === "loading" && (
