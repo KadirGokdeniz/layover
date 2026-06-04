@@ -101,13 +101,12 @@ export const ChatColumn = forwardRef<ChatColumnHandle, Props>(function ChatColum
   const inputsDisabled = pending || inputsLocked;
   const micDisabled = pending || processing || inputsLocked;
 
-  // Filter: when this column is the TRANSLATION (destination) side of a message,
-  // only render the bubble if the message's translation has been revealed.
-  // For the ORIGIN side (m.sender === column), always render.
-  const visibleMessages = messages.filter((m) => {
-    if (m.sender === column) return true; // origin column: always visible
-    return m.translationVisible !== false; // destination column: hide if explicitly false
-  });
+  // Option B: Each column shows only its OWN speaker's turns.
+  // For each message we render TWO bubbles stacked: original (what speaker said)
+  // and translation (what the listener would hear).
+  const visibleMessages = messages.filter((m) => m.sender === column);
+
+  const bubbleSide = side === "left" ? "left" : "right";
 
   return (
     <div className="flex h-full flex-col bg-background">
@@ -136,23 +135,45 @@ export const ChatColumn = forwardRef<ChatColumnHandle, Props>(function ChatColum
                 : "Conversation not started"}
           </div>
         ) : (
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-5">
             {visibleMessages.map((m) => {
-              const isMineColumn = m.sender === column;
-              const text = column === "staff" ? m.tr : m.foreign;
-              const isTranslated = m.sender !== column;
+              // Determine original (what speaker said) and translation (what listener hears)
+              const isPassenger = m.sender === "passenger";
+
+              const originalText = isPassenger ? m.foreign : m.tr;
+              const originalRtl = isPassenger && m.langForeign === "ar";
+
+              const translationText = isPassenger ? m.tr : m.foreign;
+              const translationRtl = !isPassenger && m.langForeign === "ar";
+              const translationTtsLang = isPassenger ? LANG_LOCALE.tr : LANG_LOCALE[m.langForeign];
+
+              const showTranslation = m.translationVisible !== false;
+
               return (
-                <MessageBubble
-                  key={m.id + "-" + column}
-                  bubbleId={m.id + "-" + column}
-                  text={text}
-                  variant={isMineColumn ? "sender" : "receiver"}
-                  side={isMineColumn ? (side === "left" ? "left" : "right") : (side === "left" ? "left" : "right")}
-                  rtl={rtl}
-                  forceReport={isTranslated ? m.forceReport : undefined}
-                  corrected={isTranslated ? m.corrected : undefined}
-                  ttsLang={isTranslated ? bubbleTtsLang : undefined}
-                />
+                <div key={m.id} className="flex flex-col gap-1.5">
+                  {/* Original bubble (prominent, in speaker's own language) */}
+                  <MessageBubble
+                    bubbleId={m.id + "-orig"}
+                    text={originalText}
+                    variant="sender"
+                    side={bubbleSide}
+                    rtl={originalRtl}
+                  />
+
+                  {/* Translation bubble (subdued, what the listener would hear) */}
+                  {showTranslation && (
+                    <MessageBubble
+                      bubbleId={m.id + "-trans"}
+                      text={translationText}
+                      variant="receiver"
+                      side={bubbleSide}
+                      rtl={translationRtl}
+                      forceReport={m.forceReport}
+                      corrected={m.corrected}
+                      ttsLang={translationTtsLang}
+                    />
+                  )}
+                </div>
               );
             })}
             {pending && (

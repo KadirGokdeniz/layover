@@ -138,10 +138,13 @@ function GlobalGate() {
     const last = messages[messages.length - 1];
     if (lastSpokenId.current === last.id) return;
     lastSpokenId.current = last.id;
+    // Speak the translation bubble (subdued bubble below the original)
     if (last.sender === "staff") {
-      speak(last.id + "-passenger", last.foreign, LANG_LOCALE[last.langForeign]);
+      // Staff spoke TR → translation is in passenger's foreign language
+      speak(last.id + "-trans", last.foreign, LANG_LOCALE[last.langForeign]);
     } else {
-      speak(last.id + "-staff", last.tr, LANG_LOCALE.tr);
+      // Passenger spoke foreign → translation is in TR
+      speak(last.id + "-trans", last.tr, LANG_LOCALE.tr);
     }
   }, [messages, autoSpeak]);
 
@@ -297,8 +300,8 @@ function GlobalGate() {
       await typewriter(colRef, turn.text);
       if (playbackRef.current.stopped) break;
 
-      // 2) Submit through real backend → message created with translationVisible=false
-      //    → only ORIGIN column shows a bubble (translation hidden)
+      // 2) Submit through real backend with deferred translation reveal.
+      //    Only the ORIGINAL bubble appears on speaker's column; translation stays hidden.
       await send(turn.speaker, turn.text, activeLang, ctx, true);
       colRef.current?.setDraft("");
       if (playbackRef.current.stopped) break;
@@ -315,28 +318,25 @@ function GlobalGate() {
       const lastMsg = msgs[msgs.length - 1];
       if (!lastMsg) continue;
 
-      // Bubble ids: original = speaker's column; translation = the other column
-      let origBubbleId: string;
+      // New bubble IDs (independent of column — both bubbles live on speaker's column)
+      const origBubbleId = lastMsg.id + "-orig";
+      const transBubbleId = lastMsg.id + "-trans";
+
       let origText: string;
       let origLang: string;
-      let transBubbleId: string;
       let transText: string;
       let transLang: string;
 
       if (turn.speaker === "passenger") {
         // Passenger spoke in their language; translation is TR
-        origBubbleId = lastMsg.id + "-passenger";
         origText = lastMsg.foreign;
         origLang = LANG_LOCALE[lastMsg.langForeign];
-        transBubbleId = lastMsg.id + "-staff";
         transText = lastMsg.tr;
         transLang = LANG_LOCALE.tr;
       } else {
         // Staff spoke in TR; translation is in passenger lang
-        origBubbleId = lastMsg.id + "-staff";
         origText = lastMsg.tr;
         origLang = LANG_LOCALE.tr;
-        transBubbleId = lastMsg.id + "-passenger";
         transText = lastMsg.foreign;
         transLang = LANG_LOCALE[lastMsg.langForeign];
       }
@@ -351,7 +351,7 @@ function GlobalGate() {
       }
       if (playbackRef.current.stopped) break;
 
-      // 3b) REVEAL translation bubble (now appears on the destination column)
+      // 3b) REVEAL translation bubble (appears below original, same column)
       setMessages((prev) =>
         prev.map((m) =>
           m.id === lastMsg.id ? { ...m, translationVisible: true } : m,
