@@ -42,7 +42,7 @@ export function TopBar({
             <Plane className="h-5 w-5" strokeWidth={2.25} />
           </div>
           <div className="flex flex-col leading-tight">
-            <span className="text-lg font-semibold tracking-tight">Global Gate</span>
+            <span className="text-lg font-semibold tracking-tight">Layover</span>
             <span className="text-[11px] uppercase tracking-[0.16em] text-muted-foreground">
               IST · Ground Operations Console
             </span>

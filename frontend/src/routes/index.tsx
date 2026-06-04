@@ -13,13 +13,13 @@ import type { Context, Message, PassengerLang, ScenarioTurn } from "@/lib/types"
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Global Gate · IST Ground Operations Console" },
+      { title: "Layover · IST Ground Operations Console" },
       {
         name: "description",
         content:
           "Real-time multilingual translation console for airline ground staff at Istanbul Airport.",
       },
-      { property: "og:title", content: "Global Gate · IST Ground Operations Console" },
+      { property: "og:title", content: "Layover · IST Ground Operations Console" },
       {
         property: "og:description",
         content:
