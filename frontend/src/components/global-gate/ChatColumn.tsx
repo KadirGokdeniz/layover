@@ -6,7 +6,7 @@ import {
   useState,
   type KeyboardEvent,
 } from "react";
-import { Send, Loader2, Mic } from "lucide-react";
+import { Send, Loader2, Mic, Languages } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
@@ -101,9 +101,8 @@ export const ChatColumn = forwardRef<ChatColumnHandle, Props>(function ChatColum
   const inputsDisabled = pending || inputsLocked;
   const micDisabled = pending || processing || inputsLocked;
 
-  // Option B: Each column shows only its OWN speaker's turns.
-  // For each message we render TWO bubbles stacked: original (what speaker said)
-  // and translation (what the listener would hear).
+  // Each column shows only its OWN speaker's turns. Per message we render TWO bubbles:
+  // ORIGINAL (what speaker said) and TRANSLATION (what listener would hear).
   const visibleMessages = messages.filter((m) => m.sender === column);
 
   const bubbleSide = side === "left" ? "left" : "right";
@@ -135,9 +134,8 @@ export const ChatColumn = forwardRef<ChatColumnHandle, Props>(function ChatColum
                 : "Conversation not started"}
           </div>
         ) : (
-          <div className="flex flex-col gap-5">
-            {visibleMessages.map((m) => {
-              // Determine original (what speaker said) and translation (what listener hears)
+          <div className="flex flex-col">
+            {visibleMessages.map((m, idx) => {
               const isPassenger = m.sender === "passenger";
 
               const originalText = isPassenger ? m.foreign : m.tr;
@@ -150,8 +148,14 @@ export const ChatColumn = forwardRef<ChatColumnHandle, Props>(function ChatColum
               const showTranslation = m.translationVisible !== false;
 
               return (
-                <div key={m.id} className="flex flex-col gap-1.5">
-                  {/* Original bubble (prominent, in speaker's own language) */}
+                <div
+                  key={m.id}
+                  className={cn(
+                    "flex flex-col gap-2",
+                    idx > 0 && "mt-6 pt-6 border-t border-dashed border-border/40",
+                  )}
+                >
+                  {/* === ORIGINAL bubble (prominent, in speaker's own language) === */}
                   <MessageBubble
                     bubbleId={m.id + "-orig"}
                     text={originalText}
@@ -160,24 +164,35 @@ export const ChatColumn = forwardRef<ChatColumnHandle, Props>(function ChatColum
                     rtl={originalRtl}
                   />
 
-                  {/* Translation bubble (subdued, what the listener would hear) */}
+                  {/* === TRANSLATION bubble (subdued, with clear "Çeviri" label) === */}
                   {showTranslation && (
-                    <MessageBubble
-                      bubbleId={m.id + "-trans"}
-                      text={translationText}
-                      variant="receiver"
-                      side={bubbleSide}
-                      rtl={translationRtl}
-                      forceReport={m.forceReport}
-                      corrected={m.corrected}
-                      ttsLang={translationTtsLang}
-                    />
+                    <div className="flex flex-col gap-1">
+                      <div
+                        className={cn(
+                          "flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.15em] text-muted-foreground/70",
+                          bubbleSide === "right" ? "justify-end pr-2" : "justify-start pl-2",
+                        )}
+                      >
+                        <Languages className="h-3 w-3" />
+                        <span>Çeviri</span>
+                      </div>
+                      <MessageBubble
+                        bubbleId={m.id + "-trans"}
+                        text={translationText}
+                        variant="receiver"
+                        side={bubbleSide}
+                        rtl={translationRtl}
+                        forceReport={m.forceReport}
+                        corrected={m.corrected}
+                        ttsLang={translationTtsLang}
+                      />
+                    </div>
                   )}
                 </div>
               );
             })}
             {pending && (
-              <div className="flex items-center gap-2 text-xs text-muted-foreground">
+              <div className="mt-4 flex items-center gap-2 text-xs text-muted-foreground">
                 <Loader2 className="h-3 w-3 animate-spin" />
                 {column === "staff" ? "çeviriliyor…" : "translating…"}
               </div>
