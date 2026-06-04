@@ -61,8 +61,7 @@ export function Hero() {
             </div>
 
             <h1 className="mb-6 text-4xl font-semibold leading-[1.02] tracking-tight text-foreground sm:text-5xl lg:text-[3.5rem]">
-              {t.headlineLine1[lang]}
-              <br />
+              {t.headlineLine1[lang]}{" "}
               <span className="text-[#0F4C5C] dark:text-[#5BC4D6]">
                 {t.headlineLine2[lang]}
               </span>
@@ -164,16 +163,17 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Numbered features strip */}
+      {/* Numbered features strip — REORDERED: Force-lock (01) → Context (02) → Voice (03) */}
       <div className="mx-auto max-w-6xl border-t border-border/40 px-8 py-16">
         <div className="grid gap-12 sm:grid-cols-3 sm:gap-8 lg:gap-12">
+          {/* 01: Force-lock */}
           <div>
             <div className="mb-5 flex items-center gap-3">
               <div className="font-mono text-xs font-medium text-[#0F4C5C] dark:text-[#5BC4D6]">
                 01
               </div>
               <div className="h-px flex-1 bg-border/40" />
-              <Languages className="size-4 text-muted-foreground" />
+              <Lock className="size-4 text-muted-foreground" />
             </div>
             <div className="mb-2 text-[15px] font-medium text-foreground">
               {t.feature01Title[lang]}
@@ -183,13 +183,14 @@ export function Hero() {
             </div>
           </div>
 
+          {/* 02: Context-aware */}
           <div>
             <div className="mb-5 flex items-center gap-3">
               <div className="font-mono text-xs font-medium text-[#0F4C5C] dark:text-[#5BC4D6]">
                 02
               </div>
               <div className="h-px flex-1 bg-border/40" />
-              <Lock className="size-4 text-muted-foreground" />
+              <Layers className="size-4 text-muted-foreground" />
             </div>
             <div className="mb-2 text-[15px] font-medium text-foreground">
               {t.feature02Title[lang]}
@@ -199,13 +200,14 @@ export function Hero() {
             </div>
           </div>
 
+          {/* 03: Multilingual voice */}
           <div>
             <div className="mb-5 flex items-center gap-3">
               <div className="font-mono text-xs font-medium text-[#0F4C5C] dark:text-[#5BC4D6]">
                 03
               </div>
               <div className="h-px flex-1 bg-border/40" />
-              <Layers className="size-4 text-muted-foreground" />
+              <Languages className="size-4 text-muted-foreground" />
             </div>
             <div className="mb-2 text-[15px] font-medium text-foreground">
               {t.feature03Title[lang]}

@@ -71,8 +71,8 @@ export const t = {
     tr: "aynı dili konuşur.",
   },
   subtitle: {
-    en: "Multilingual voice interpreter for airline ground handling. Flight codes, gates, and seat numbers preserved in real-time translation.",
-    tr: "Havalimanı yer hizmetleri için çok dilli sesli tercüman. Uçuş kodları, kapı ve koltuk bilgileri değişmeden, gerçek zamanlı.",
+    en: "Voice interpreter built for airline ground operations. Flight codes, gates, and operational data — preserved across every translation, every language.",
+    tr: "Havalimanı yer hizmetleri için tasarlanmış sesli tercüman. Uçuş kodları, kapılar ve operasyonel veriler — her çeviride, her dilde korunur.",
   },
   ctaHelper1: { en: "No account needed", tr: "Hesap gerekmiyor" },
   ctaHelper2: { en: "Opens in browser", tr: "Tarayıcıda açılır" },
@@ -82,29 +82,107 @@ export const t = {
   mockPassenger: { en: "Passenger · IT", tr: "Yolcu · IT" },
   forceLocked: { en: "force-locked", tr: "force-locked" },
 
-  // Features
+  // Features strip — REORDERED: force-lock first, contexts second, voice third
   feature01Title: {
+    en: "Force-locked operational data",
+    tr: "Force-locked operasyonel veri",
+  },
+  feature01Desc: {
+    en: "Operational data is preserved across every translation — in every condition.",
+    tr: "Operasyonel veri her çeviride, her koşulda korunur.",
+  },
+  feature02Title: {
+    en: "Context-aware translation",
+    tr: "Bağlam-duyarlı çeviri",
+  },
+  feature02Desc: {
+    en: "Context-aware translation. The scenario is preserved throughout.",
+    tr: "Bağlama duyarlı çeviri. Senaryo başından sonuna korunur.",
+  },
+  feature03Title: {
     en: "Multilingual, voice-enabled",
     tr: "Çok dilli, sesli iletişim",
   },
-  feature01Desc: {
+  feature03Desc: {
     en: "Staff speaks Turkish, passengers hear their own language. Two-way, real-time, microphone-enabled.",
     tr: "Personel Türkçe konuşur, yolcu kendi dilinde duyar. Mikrofon ile çift yönlü, gerçek zamanlı.",
   },
-  feature02Title: {
-    en: "Force-locked flight data",
-    tr: "Force-locked uçuş bilgileri",
+
+  // ============== Problem section ==============
+  problemKicker: { en: "The problem", tr: "Sorun" },
+  problemHeading: {
+    en: "Generic translation tools weren't built for operations.",
+    tr: "Genel çeviri araçları operasyon için yapılmadı.",
   },
-  feature02Desc: {
-    en: "Flight codes, gates, seat numbers, and boarding times never change in translation. Cannot make mistakes.",
-    tr: "Uçuş kodları, kapı, koltuk ve biniş saatleri çeviride asla değişmez. Hata yapamaz.",
+  problemBody: {
+    en: "Ground operations staff at major airports handle passengers from 20+ nationalities each shift. Turkish and English alone are not enough. Yet generic AI translation tools may change flight codes, invent context that wasn't there, or mistranslate operational vocabulary. Ground operations cannot tolerate this.",
+    tr: "Büyük havalimanlarında yer hizmetleri personeli her vardiya 20+ farklı milletten yolcu karşılar. Türkçe ve İngilizce yetmiyor. Üstelik genel yapay zeka çeviri araçları uçuş kodlarını değiştirebilir, olmayan bağlam ekleyebilir veya operasyonel terimleri yanlış çevirebilir. Yer hizmetleri bunu kaldıramaz.",
   },
-  feature03Title: {
-    en: "5 operational contexts",
-    tr: "5 operasyonel bağlam",
+  consequence1Title: { en: "Missed gates", tr: "Kaçırılan kapılar" },
+  consequence1Desc: {
+    en: "Passengers don't reach their boarding gate on time.",
+    tr: "Yolcular biniş kapısına zamanında ulaşamıyor.",
   },
-  feature03Desc: {
-    en: "Boarding, check-in, transfer, security, passport — purpose-trained per scenario.",
-    tr: "Boarding, check-in, transfer, security, passport — her senaryo için ayrı eğitilmiş.",
+  consequence2Title: { en: "Wrong seat", tr: "Yanlış koltuk" },
+  consequence2Desc: {
+    en: "Misunderstandings lead to incorrect seating.",
+    tr: "Yanlış anlamalar hatalı oturma düzenine yol açıyor.",
+  },
+  consequence3Title: {
+    en: "Repeated explanations",
+    tr: "Tekrarlanan açıklamalar",
+  },
+  consequence3Desc: {
+    en: "Staff explain the same information three or four times.",
+    tr: "Personel aynı bilgiyi üç-dört kez açıklıyor.",
+  },
+  consequence4Title: {
+    en: "Declining satisfaction",
+    tr: "Düşen memnuniyet",
+  },
+  consequence4Desc: {
+    en: "Customer satisfaction scores trend downward.",
+    tr: "Müşteri memnuniyeti skorları düşüyor.",
+  },
+
+  // ============== Solution section — REORDERED ==============
+  solutionKicker: {
+    en: "How Layover works",
+    tr: "Layover nasıl çalışır",
+  },
+  solutionHeading: {
+    en: "Built for operational accuracy.",
+    tr: "Operasyonel doğruluk için tasarlandı.",
+  },
+  // Solution 01: Force-lock (was 02)
+  solution01Title: {
+    en: "Force-locked operational data",
+    tr: "Force-locked operasyonel veri",
+  },
+  solution01Desc: {
+    en: "Flight codes, gate numbers, seat assignments, and boarding times are post-processed against the source. If the AI changes them during translation, the system corrects it. Always exact, always preserved.",
+    tr: "Uçuş kodları, kapı numaraları, koltuk bilgileri ve biniş saatleri kaynak metinle karşılaştırılır. Yapay zeka tercümede değiştirirse sistem düzeltir. Her zaman birebir, her zaman korunur.",
+  },
+  // Solution 02: Context-aware (was 03)
+  solution02Title: {
+    en: "Context-aware translation",
+    tr: "Bağlam-duyarlı çeviri",
+  },
+  solution02Desc: {
+    en: "Each scenario has its own prompt engineering — boarding uses different vocabulary than transfer, security has different sensitivity than passport. Context-specific design significantly improves accuracy.",
+    tr: "Her senaryo kendi prompt mühendisliğine sahip — boarding'in kelime hazinesi transfer'den farklı, security'nin hassasiyeti passport'tan farklı. Bağlama özgü tasarım doğruluğu belirgin artırır.",
+  },
+  // Solution 03: Voice + multilingual (was 01)
+  solution03Title: {
+    en: "Multilingual voice, both directions",
+    tr: "Çift yönlü, çok dilli ses",
+  },
+  solution03Desc: {
+    en: "Staff speak Turkish, passengers hear their native language through earpiece or speaker. Voice input is supported too — passengers speak into the microphone and the system translates to Turkish in real-time.",
+    tr: "Personel Türkçe konuşur, yolcu kendi dilinde kulaklıktan veya hoparlörden duyar. Sesli giriş de destekleniyor — yolcu mikrofona konuşur, sistem Türkçeye gerçek zamanlı çevirir.",
+  },
+  solutionContextLabel: {
+    en: "Purpose-trained",
+    tr: "Özel eğitildi",
   },
 };

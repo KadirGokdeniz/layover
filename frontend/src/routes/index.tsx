@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/landing/Hero";
+import { ProblemSection } from "@/components/landing/ProblemSection";
+import { SolutionSection } from "@/components/landing/SolutionSection";
 import { LandingLangProvider } from "@/lib/landing-i18n";
 
 export const Route = createFileRoute("/")({
@@ -29,6 +31,8 @@ function Landing() {
     <LandingLangProvider>
       <div className="min-h-screen bg-background text-foreground">
         <Hero />
+        <ProblemSection />
+        <SolutionSection />
       </div>
     </LandingLangProvider>
   );
