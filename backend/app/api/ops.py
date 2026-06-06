@@ -54,13 +54,16 @@ CONTEXT_CONFIG: dict[str, dict[str, Any]] = {
         ],
     },
     "check-in": {
-        "type": "flight",
-        "flight_ref": "TK1979-2026-06-28",
-        "fields": [
-            ("Flight", "flight_number"),
-            ("Route", "route_display"),
-            ("Counters", "checkin_counters"),
-            ("Departure", "departure_time"),
+    "type": "flight",
+    "flight_ref": "TK1979-2026-06-28",
+    "fields": [
+        ("Flight", "flight_number"),
+        ("Route", "route_display"),
+        ("Counters", "checkin_counters"),
+        ("Departure", "departure_time"),
+        ("Gate", "gate"),
+        ("Boarding", "boarding_time"),
+        ("Seat", "assigned_seat"),
         ],
     },
     "transfer": {
