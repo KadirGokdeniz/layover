@@ -60,7 +60,3 @@ Frontend: http://localhost:8080
 - [Anthropic Console](https://console.anthropic.com/) — Claude API
 - [ElevenLabs](https://elevenlabs.io/) — TTS
 - [AssemblyAI](https://www.assemblyai.com/) — STT
-
-## Lisans
-
-Proprietary. THY başvurusu kapsamında.
