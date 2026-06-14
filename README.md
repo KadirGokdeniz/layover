@@ -1,4 +1,4 @@
-# Global Gate
+# Layover
 
 Çok dilli havalimanı tercüman prototipi. TR ↔ EN/IT/AR/RU. Türk Hava Yolları Terminal Hızlandırma 2026 başvurusu için.
 
